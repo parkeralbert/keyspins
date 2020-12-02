@@ -307,7 +307,7 @@ public class XpnSearch {
 	}
 
 	private void writeSpinsToFile(List<Spin> values, String filePath) throws Exception {
-		BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/parkeralbert/Downloads/spins.txt", true));
+		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
 		
 		if(values.size() > 0) {
 			writer.write(values.get(0).getArtist());

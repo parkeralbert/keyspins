@@ -6,8 +6,8 @@ public class SpinTest {
 	
 	public static void main(String[] args) throws Exception
     {
-		String readPath = "/Users/parkeralbert/Downloads/new_spin_inputs.txt";
-		String writePath = "/Users/parkeralbert/Downloads/spins.txt";
+		String readPath = "new_spin_inputs.txt";
+		String writePath = "spins.txt";
 		String delim = "<>";
         XpnSearch xpn = new XpnSearch();
         Date firstDayOfWeek = xpn.getFirstDayOfWeek(readPath);
