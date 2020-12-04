@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
@@ -22,5 +23,13 @@ class TestXpnSearch {
 		expectedDate.setTimeZone(TimeZone.getTimeZone("EST"));
 		//MM/dd/yy h:mm a z
 		assertEquals(expectedDate.getTime(), XpnSearch.parseLastDayOfWeek(lineToParse));
+	}
+	
+	void addArtistInfoStoresArtistNameCorrectly() {
+		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
+		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
+		XpnSearch.addArtistInfo(artistInfoToStore, false, "<>", artistInfos);
+		ArtistInfo artistInfo = artistInfos.get(0);
+		assertEquals(artistInfo.getArtistName(), "Nothing");
 	}
 }

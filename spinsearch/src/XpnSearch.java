@@ -182,7 +182,7 @@ public class XpnSearch {
 		return spinData;
 	}
 	
-	private static void addArtistInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
+	public static void addArtistInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
 		String[] fullAlbum = {};
 		
 		if (line.indexOf(delim) != -1) {
