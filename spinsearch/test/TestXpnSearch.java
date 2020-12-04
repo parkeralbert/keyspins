@@ -14,7 +14,7 @@ class TestXpnSearch {
 		GregorianCalendar expectedDate = new GregorianCalendar(2020, 9, 27, 13, 30);
 		expectedDate.setTimeZone(TimeZone.getTimeZone("EST"));
 		//MM/dd/yy h:mm a z
-		assertEquals(expectedDate.getTime(), XpnSearch.parseFirstDayOfWeek(lineToParse));
+		assertEquals(expectedDate.getTime(), SpinSearch.parseFirstDayOfWeek(lineToParse));
 	}
 
 	void parseLastDayOfWeekReturnsDayCorrectly() {
@@ -22,13 +22,13 @@ class TestXpnSearch {
 		GregorianCalendar expectedDate = new GregorianCalendar(2020, 10, 3, 13, 0);
 		expectedDate.setTimeZone(TimeZone.getTimeZone("EST"));
 		//MM/dd/yy h:mm a z
-		assertEquals(expectedDate.getTime(), XpnSearch.parseLastDayOfWeek(lineToParse));
+		assertEquals(expectedDate.getTime(), SpinSearch.parseLastDayOfWeek(lineToParse));
 	}
 	
 	void addArtistInfoStoresArtistNameCorrectly() {
 		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
 		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
-		XpnSearch.addArtistInfo(artistInfoToStore, false, "<>", artistInfos);
+		SpinSearch.addArtistInfo(artistInfoToStore, false, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(0);
 		assertEquals(artistInfo.getArtistName(), "Nothing");
 	}

@@ -9,7 +9,7 @@ public class SpinTest {
 		String readPath = "new_spin_inputs.txt";
 		String writePath = "spins.txt";
 		String delim = "<>";
-        XpnSearch xpn = new XpnSearch();
+        SpinSearch xpn = new SpinSearch();
         Date firstDayOfWeek = xpn.getFirstDayOfWeek(readPath);
         Date lastDayOfWeek = xpn.getLastDayOfWeek(readPath);
         if(firstDayOfWeek == null) {
