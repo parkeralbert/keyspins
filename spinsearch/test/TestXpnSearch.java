@@ -32,4 +32,30 @@ class TestXpnSearch {
 		ArtistInfo artistInfo = artistInfos.get(0);
 		assertEquals(artistInfo.getArtistName(), "Nothing");
 	}
+	
+	void addArtistInfoStoresAlbumCorrectly() {
+		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
+		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
+		SpinSearch.addArtistInfo(artistInfoToStore, false, "<>", artistInfos);
+		ArtistInfo artistInfo = artistInfos.get(0);
+		assertEquals(artistInfo.getAlbum(), "The Great Dismal");
+	}
+	
+	void addArtistInfoStoresSongsCorrectly() {
+		String artistInfoToStore = "Nothing <> Bernie Sanders + Say Less <> Relapse Records";
+		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
+		SpinSearch.addArtistInfo(artistInfoToStore, true, "<>", artistInfos);
+		ArtistInfo artistInfo = artistInfos.get(0);
+		String[] songs = {"Bernie Sanders" , "Say Less"};
+		assertEquals(artistInfo.getSongs(), songs);
+	}
+	void isDateInRangeIdentifiesRangeCorrectly() {
+		GregorianCalendar firstDayOfWeek = new GregorianCalendar(2020, 9, 27, 13, 30);
+		firstDayOfWeek.setTimeZone(TimeZone.getTimeZone("EST"));
+		GregorianCalendar lastDayOfWeek = new GregorianCalendar(2020, 10, 3, 13, 0);
+		lastDayOfWeek.setTimeZone(TimeZone.getTimeZone("EST"));
+		GregorianCalendar spinDate = new GregorianCalendar(2020, 9, 29, 13, 30);
+		spinDate.setTimeZone(TimeZone.getTimeZone("EST"));
+		SpinSearch.isDateInRange(firstDayOfWeek.getTime(), lastDayOfWeek.getTime(), spinDate.getTime());
+	}
 }

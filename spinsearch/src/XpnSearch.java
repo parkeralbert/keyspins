@@ -6,7 +6,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 public class XpnSearch extends SpinSearch {
-	private	static Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
+	
+	public	static Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
 		Map<String, String> postData = new HashMap<>();
 		String artist = (String) currentArtist.getArtistName();
 		postData.put("val", "search");
@@ -18,7 +19,7 @@ public class XpnSearch extends SpinSearch {
 		Elements spinData = null;
 		
 		spinData = (page.select(String.format("td:containsOwn(%s)", songOrAlbumName)));
-		System.out.println("*** Retrieved " + artist + " spins: " + spinData.text());
+		System.out.println("*** Retrieasfved " + artist + " spins: " + spinData.text());
 		
 		
 		return spinData;

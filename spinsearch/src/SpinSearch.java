@@ -16,7 +16,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class SpinSearch {
+abstract public class SpinSearch {
 
 	public static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1";
 
@@ -165,7 +165,7 @@ public class SpinSearch {
 		}
 	}
 
-	private	static Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
+	public	static Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
 		Map<String, String> postData = new HashMap<>();
 		String artist = (String) currentArtist.getArtistName();
 		postData.put("val", "search");
@@ -182,7 +182,6 @@ public class SpinSearch {
 		
 		return spinData;
 	}
-	
 	public static void addArtistInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
 		String[] fullAlbum = {};
 		
@@ -281,7 +280,7 @@ public class SpinSearch {
 		}
 	}
 	
-	private static boolean isDateInRange(Date firstDayOfWeek, Date lastDayOfWeek, Date spinDate) {
+	public static boolean isDateInRange(Date firstDayOfWeek, Date lastDayOfWeek, Date spinDate) {
 		if ((spinDate.after(firstDayOfWeek) || spinDate.equals(firstDayOfWeek)) && (spinDate.before(lastDayOfWeek) || spinDate.equals(lastDayOfWeek))){
 			return true;
 		}
