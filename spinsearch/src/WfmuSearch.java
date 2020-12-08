@@ -35,25 +35,30 @@ public class WfmuSearch extends SpinSearch {
 			Elements singleSpinData = e.children();
 			
 			System.out.println("*** Retrieved " + artistInfo.getArtistName() + " spins: " + singleSpinData.eachText());
-			String[] segments = e.text().split(" - ");
 			if(artistInfo.getArtistName() == artistInfo.getAlbum()) {
-				if(singleSpinData.size() < 5 || singleSpinData.get(2).text() != artistInfo.getAlbum()) {
+				if(!singleSpinData.get(2).text().equalsIgnoreCase(artistInfo.getAlbum())) {
 					correctAlbum = false;
 				}
 			}
 		if (correctAlbum)	{
-			String song = segments[1];
-			SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
-			Date spinDate = formatter.parse(segments[0].substring(0, 19));
+			SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy");
+			Date spinDate = null;
+			if(singleSpinData.size() == 4) {
+				spinDate = formatter.parse(singleSpinData.get(3).text());
+			}
+			if (singleSpinData.size() == 5) {
+				spinDate = formatter.parse(singleSpinData.get(4).text());
+			}
 			
 			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)){
+				String song = singleSpinData.get(1).text();
 				System.out.println("song is " + song + " date is " + spinDate);
 				String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
 				Spin spin = allSpins.get(key);
 				
 				if (spin == null) {
 					spin = new Spin(artistInfo.getArtistName(), song, artistInfo.getAlbum(), spinDate, spinDate);
-					spin.setDj("Kristen Kurtis");
+					spin.setDj("Olivia");
 				} 
 				else {
 					if (spinDate.before(spin.getFirstPlayDate())) {
