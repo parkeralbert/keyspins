@@ -19,7 +19,6 @@ public class WfmuSearch extends SpinSearch {
 		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
 		
 		Elements spinData = new Elements();
-		songOrAlbumName = "Black Dog";
 		Elements rawData = page.select(String.format("tr:contains(%s)", songOrAlbumName));
 		
 		if(rawData.size() > 1) {
@@ -30,11 +29,13 @@ public class WfmuSearch extends SpinSearch {
 	}
 	
 	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
+		if (spinData.hasText()) {
+			System.out.println("Retrieved " + artistInfo.getArtistName() + " spins: " + spinData.text());
+		}
 		for (Element e : spinData) {
 			boolean correctAlbum = true;
 			Elements singleSpinData = e.children();
 			
-			System.out.println("*** Retrieved " + artistInfo.getArtistName() + " spins: " + singleSpinData.eachText());
 			if(artistInfo.getArtistName() == artistInfo.getAlbum()) {
 				if(!singleSpinData.get(2).text().equalsIgnoreCase(artistInfo.getAlbum())) {
 					correctAlbum = false;
@@ -52,7 +53,6 @@ public class WfmuSearch extends SpinSearch {
 			
 			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)){
 				String song = singleSpinData.get(1).text();
-				System.out.println("song is " + song + " date is " + spinDate);
 				String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
 				Spin spin = allSpins.get(key);
 				
@@ -71,7 +71,7 @@ public class WfmuSearch extends SpinSearch {
 				
 				spin.incrementCount();
 
-				System.out.println("Spin: " + e.text());
+				System.out.println("*** SPIN TO WRITE: " + e.text());
 				allSpins.put(key, spin);
 			}
 		}
