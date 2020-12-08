@@ -165,7 +165,7 @@ abstract public class SpinSearch {
 		}
 	}
 
-	public	static Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
+	public	Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
 		Map<String, String> postData = new HashMap<>();
 		String artist = (String) currentArtist.getArtistName();
 		postData.put("val", "search");
@@ -182,6 +182,7 @@ abstract public class SpinSearch {
 		
 		return spinData;
 	}
+	
 	public static void addArtistInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
 		String[] fullAlbum = {};
 		
@@ -246,7 +247,7 @@ abstract public class SpinSearch {
 	
 	
 
-	private void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
+	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
 		for (Element e : spinData) {
 			String[] segments = e.text().split(" - ");
 			String song = segments[1];
@@ -279,6 +280,7 @@ abstract public class SpinSearch {
 
 		}
 	}
+	
 	
 	public static boolean isDateInRange(Date firstDayOfWeek, Date lastDayOfWeek, Date spinDate) {
 		if ((spinDate.after(firstDayOfWeek) || spinDate.equals(firstDayOfWeek)) && (spinDate.before(lastDayOfWeek) || spinDate.equals(lastDayOfWeek))){

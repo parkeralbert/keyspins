@@ -10,6 +10,7 @@ public class SpinTest {
 		String writePath = "spins.txt";
 		String delim = "<>";
         XpnSearch xpn = new XpnSearch();
+        WfmuSearch wfmu = new WfmuSearch();
         Date firstDayOfWeek = xpn.getFirstDayOfWeek(readPath);
         Date lastDayOfWeek = xpn.getLastDayOfWeek(readPath);
         if(firstDayOfWeek == null) {
@@ -19,7 +20,8 @@ public class SpinTest {
         	System.out.println("No last date found");
         }
 		System.out.println("This week is " + firstDayOfWeek + " - " + lastDayOfWeek);
-        ArrayList <ArtistInfo> searchList =  xpn.getArtistList(readPath, delim);
-        xpn.spinSearch("https://xpn.org/playlists/playlist-search", searchList, firstDayOfWeek, lastDayOfWeek, writePath);
+        //ArrayList <ArtistInfo> searchList =  xpn.getArtistList(readPath, delim);
+        ArrayList <ArtistInfo> searchList =  wfmu.getArtistList(readPath, delim);
+        wfmu.spinSearch("https://wfmu.org/search.php?action=searchbasic", searchList, firstDayOfWeek, lastDayOfWeek, writePath);
     }
 }
