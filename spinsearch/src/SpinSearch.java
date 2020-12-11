@@ -78,10 +78,10 @@ abstract public class SpinSearch {
 	}
 
 	//reads and stores albums and singles to search
-	public ArrayList <ArtistInfo> getArtistList(String albumInputFilePath, String delim){
+	public Map <String, ArtistInfo> getArtistList(String albumInputFilePath, String delim){
 		
 		String line = null;
-		Map<String, ArrayList<ArtistInfo>> artistInfos = new HashMap<>(); 
+		Map<String, ArtistInfo> artistInfos = new HashMap<>(); 
 		boolean singleOnly = false;
 		try
 		{
@@ -97,6 +97,8 @@ abstract public class SpinSearch {
 				
 			}
 			albumReader.close();
+			
+			
 		}
 		catch (Exception e)
 		{
@@ -176,7 +178,7 @@ abstract public class SpinSearch {
 			
 			artistInfo.setSongs(songs);
 			artistInfo.setSingleOnly(true);		
-			artistInfos.add(artistInfo);
+			artistInfos.put(artistInfo.getArtistName(), artistInfo);
 		}
 			return artistInfo;
 	}
