@@ -141,12 +141,13 @@ abstract public class SpinSearch {
 		
 	}
 	
-	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, Map<String, ArrayList<ArtistInfo>> artistInfos) {
+	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, Map<String, ArtistInfo> artistInfos) {
 		ArrayList <String> fullAlbum = null;
 		
 		if (line.indexOf(delim) != -1) {
 			ArtistInfo artistInfo = new ArtistInfo();
 			String[] segments = splitArtistNameAndProjectName(line, delim, artistInfo); 
+			artistInfo.setArtistName(segments[0]);
 			
 			if(segments.length >= 3) {
 				artistInfo.setLabel(segments[2]);
@@ -156,7 +157,7 @@ abstract public class SpinSearch {
 			
 			artistInfo.setAlbum(segments[1]);
 			artistInfo.setSongs(fullAlbum);
-			artistInfos.add(artistInfo);
+			artistInfos.put(artistInfo.getArtistName(), artistInfo);
 			
 			if(segments.length >= 3) {
 				artistInfo.setLabel(segments[2]);
@@ -282,7 +283,6 @@ abstract public class SpinSearch {
 	
 	private static String[] splitArtistNameAndProjectName(String line, String delim, ArtistInfo artistInfo) {
 		String[] segments = line.split(" " + delim + " ");
-		artistInfo.setArtistName(segments[0]);
 		return segments;
 	}
 	
