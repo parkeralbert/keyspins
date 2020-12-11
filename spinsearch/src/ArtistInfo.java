@@ -1,9 +1,10 @@
- 
+import java.util.ArrayList;
+
 public class ArtistInfo {
 	private String artistName;
 	private boolean singleOnly;
 	private String album;
-	private String[] songs;
+	private ArrayList<String> songs;
 	private String label;
 	public String getAlbum() { 
 		return album; 
@@ -11,10 +12,10 @@ public class ArtistInfo {
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-	public String[] getSongs() {
+	public ArrayList<String> getSongs() {
 		return songs;
 	}
-	public void setSongs(String[] songs) {
+	public void setSongs(ArrayList<String> songs) {
 		this.songs = songs;
 	}
 	public String getArtistName() {
