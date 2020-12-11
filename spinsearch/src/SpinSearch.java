@@ -81,7 +81,7 @@ abstract public class SpinSearch {
 	public ArrayList <ArtistInfo> getArtistList(String albumInputFilePath, String delim){
 		
 		String line = null;
-		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>(); 
+		Map<String, ArrayList<ArtistInfo>> artistInfos = new HashMap<>(); 
 		boolean singleOnly = false;
 		try
 		{
@@ -107,13 +107,12 @@ abstract public class SpinSearch {
         
 	}
 	
-	public void storeSongs(String songsInAlbumsFilePath, String delim){
+	public void storeSongs(String songsInAlbumsFilePath, String delim, ArrayList<ArtistInfo> artistInfos){
 		Map<String, List<Spin>> songsForEachAlbum= new HashMap<>();
 		String line = null;
 		String artist = null;
 		String album = null;
 		String song = null;
-		String[] songList = new String[] {};
 		try
 		{
 			BufferedReader albumReader = new BufferedReader(new FileReader(songsInAlbumsFilePath));
@@ -126,7 +125,7 @@ abstract public class SpinSearch {
 				}
 				if(album != null && line.contains(delim)) {
 					song = line.split(" " + delim + " ")[1];
-					songList.add()
+					artistInfos.get(artist).add(song);
 				}
 				ArtistInfo currentArtist = addAlbumInfo(line, singleOnly, delim, artistInfos);
 				
@@ -142,8 +141,8 @@ abstract public class SpinSearch {
 		
 	}
 	
-	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
-		String[] fullAlbum = {};
+	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, Map<String, ArrayList<ArtistInfo>> artistInfos) {
+		ArrayList <String> fullAlbum = null;
 		
 		if (line.indexOf(delim) != -1) {
 			ArtistInfo artistInfo = new ArtistInfo();
@@ -170,7 +169,7 @@ abstract public class SpinSearch {
 			
 			setSongs(segments[1], artistInfo);
 			
-			String[] songs = artistInfo.getSongs();
+			ArrayList <String> songs = artistInfo.getSongs();
 			
 			removeQuotes(artistInfo, songs);
 			
