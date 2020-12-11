@@ -175,7 +175,7 @@ abstract public class SpinSearch {
 	}
 	
 	
-	public void spinSearch(String url, ArrayList <ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
+	public void spinSearch(String url, Map<String, ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
 		Map<String, List<Spin>> spinsByArtist = getSpins(url, artistInfos, firstDayOfWeek, lastDayOfWeek, filePath);
 		outputSpinsByArtist(filePath, spinsByArtist);
 	}
@@ -199,7 +199,7 @@ abstract public class SpinSearch {
 	}
 
 	
-	public Map<String, List<Spin>> getSpins(String url, ArrayList <ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
+	public Map<String, List<Spin>> getSpins(String url, Map <String, ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
 		ArrayList<ArtistInfo> artistsToSearch = artistInfos;
 		Map<String, Spin> allSpins = new HashMap<>();
 
