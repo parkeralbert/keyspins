@@ -78,15 +78,14 @@ abstract public class SpinSearch {
 	}
 
 	//reads and stores albums and singles to search
-	public ArrayList <ArtistInfo> getArtistList(String filePath, String delim){
+	public ArrayList <ArtistInfo> getArtistList(String albumInputFilePath, String delim){
 		
 		String line = null;
 		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>(); 
 		boolean singleOnly = false;
 		try
 		{
-			BufferedReader albumReader = new BufferedReader(new FileReader(filePath));
-			BufferedReader songReader = new BufferedReader(new FileReader(filePath));
+			BufferedReader albumReader = new BufferedReader(new FileReader(albumInputFilePath));
 			while ((line = albumReader.readLine()) != null)
 			{
 				
@@ -95,7 +94,6 @@ abstract public class SpinSearch {
 				}
 				
 				ArtistInfo currentArtist = addAlbumInfo(line, singleOnly, delim, artistInfos);
-				for currentArtist
 				
 			}
 			albumReader.close();
@@ -107,6 +105,33 @@ abstract public class SpinSearch {
 		}
 		return artistInfos;
         
+	}
+	
+	public Map<String, List<Spin>> storeSongs(String songsInAlbumsFilePath){
+		String line = null;
+		
+		try
+		{
+			BufferedReader albumReader = new BufferedReader(new FileReader(songsInAlbumsFilePath));
+			while ((line = albumReader.readLine()) != null)
+			{
+				
+				if (line.equalsIgnoreCase("singles:")) {
+					singleOnly = true;
+				}
+				
+				ArtistInfo currentArtist = addAlbumInfo(line, singleOnly, delim, artistInfos);
+				
+			}
+			albumReader.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Error: " + e);
+			e.printStackTrace();
+		}
+
+		
 	}
 	
 	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
