@@ -1,3 +1,5 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -76,6 +78,17 @@ public class WfmuSearch extends SpinSearch {
 			}
 		}
 
+		}
+	}
+	
+	public void outputSpinsByArtist(String filePath, Map<String, List<Spin>> spinsByArtist) throws Exception {
+		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+		writer.write("WFMU");
+		writer.newLine();
+		writer.close();
+		
+		for (List<Spin> spinsToPrint : spinsByArtist.values()) {
+			writeSpinsToFile(spinsToPrint, filePath);
 		}
 	}
 }

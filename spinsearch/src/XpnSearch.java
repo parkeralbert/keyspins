@@ -1,6 +1,9 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.jsoup.Jsoup;
@@ -22,7 +25,10 @@ public class XpnSearch extends SpinSearch {
 		Elements spinData = null;
 		
 		spinData = (page.select(String.format("td:containsOwn(%s)", songOrAlbumName)));
-		System.out.println("*** Retrieasfved " + artist + " spins: " + spinData.text());
+		
+		if(spinData != null){
+			System.out.println("Retrieved " + artist + " spins: " + spinData.text());
+		}
 		
 		
 		return spinData;
@@ -62,11 +68,22 @@ public class XpnSearch extends SpinSearch {
 				
 				spin.incrementCount();
 
-				System.out.println("Spin: " + e.text());
+				System.out.println("*** SPIN TO WRITE: " + e.text());
 				allSpins.put(key, spin);
 			}
 		}
 
+		}
+	}
+	
+	public void outputSpinsByArtist(String filePath, Map<String, List<Spin>> spinsByArtist) throws Exception {
+		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
+		writer.write("WXPN");
+		writer.newLine();
+		writer.close();
+		
+		for (List<Spin> spinsToPrint : spinsByArtist.values()) {
+			writeSpinsToFile(spinsToPrint, filePath);
 		}
 	}
 }

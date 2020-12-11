@@ -28,7 +28,7 @@ class TestXpnSearch {
 	void addArtistInfoStoresArtistNameCorrectly() {
 		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
 		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
-		SpinSearch.addArtistInfo(artistInfoToStore, false, "<>", artistInfos);
+		SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(0);
 		assertEquals(artistInfo.getArtistName(), "Nothing");
 	}
@@ -36,7 +36,7 @@ class TestXpnSearch {
 	void addArtistInfoStoresAlbumCorrectly() {
 		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
 		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
-		SpinSearch.addArtistInfo(artistInfoToStore, false, "<>", artistInfos);
+		SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(0);
 		assertEquals(artistInfo.getAlbum(), "The Great Dismal");
 	}
@@ -44,7 +44,7 @@ class TestXpnSearch {
 	void addArtistInfoStoresSongsCorrectly() {
 		String artistInfoToStore = "Nothing <> Bernie Sanders + Say Less <> Relapse Records";
 		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
-		SpinSearch.addArtistInfo(artistInfoToStore, true, "<>", artistInfos);
+		SpinSearch.addAlbumInfo(artistInfoToStore, true, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(0);
 		String[] songs = {"Bernie Sanders" , "Say Less"};
 		assertEquals(artistInfo.getSongs(), songs);

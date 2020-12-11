@@ -85,17 +85,20 @@ abstract public class SpinSearch {
 		boolean singleOnly = false;
 		try
 		{
-			BufferedReader reader = new BufferedReader(new FileReader(filePath));
-			while ((line = reader.readLine()) != null)
+			BufferedReader albumReader = new BufferedReader(new FileReader(filePath));
+			BufferedReader songReader = new BufferedReader(new FileReader(filePath));
+			while ((line = albumReader.readLine()) != null)
 			{
 				
 				if (line.equalsIgnoreCase("singles:")) {
 					singleOnly = true;
 				}
 				
-				addArtistInfo(line, singleOnly, delim, artistInfos);
+				ArtistInfo currentArtist = addAlbumInfo(line, singleOnly, delim, artistInfos);
+				for currentArtist
+				
 			}
-			reader.close();
+			albumReader.close();
 		}
 		catch (Exception e)
 		{
@@ -106,84 +109,7 @@ abstract public class SpinSearch {
         
 	}
 	
-	public void spinSearch(String url, ArrayList <ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
-		Map<String, List<Spin>> spinsByArtist = getSpins(url, artistInfos, firstDayOfWeek, lastDayOfWeek, filePath);
-		outputSpinsByArtist(filePath, spinsByArtist);
-	}
-	
-	public static Date parseFirstDayOfWeek(String line) {
-		Date firstDayOfWeek = null;
-		if(line.indexOf("Date:") != -1) {
-			String[] segments = line.substring(6).split(" - ");
-			firstDayOfWeek = parseDateAndTime(segments[0]);
-		}
-		return firstDayOfWeek;
-	}
-	
-	public static Date parseLastDayOfWeek(String line) {
-		Date lastDayOfWeek = null;
-		if(line.indexOf("Date:") != -1) {
-			String[] segments = line.substring(6).split(" - ");
-			lastDayOfWeek = parseDateAndTime(segments[1]);
-		}
-		return lastDayOfWeek;
-	}
-
-	
-	private Map<String, List<Spin>> getSpins(String url, ArrayList <ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
-		ArrayList<ArtistInfo> artistsToSearch = artistInfos;
-		Map<String, Spin> allSpins = new HashMap<>();
-
-		for (ArtistInfo currentArtist : artistsToSearch) {
-
-			if (currentArtist.isSingleOnly()) {
-				for (String song : currentArtist.getSongs()) {
-					Elements spinData = getSpinData(currentArtist, url, song);
-					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
-				}
-			}
-			else {
-				Elements spinData = getSpinData(currentArtist, url, currentArtist.getAlbum());
-				addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
-			}
-		}
-		
-		Map<String, List<Spin>> spinsByArtist = getSpinsByArtist(allSpins.values());
-		
-		return spinsByArtist;
-
-	}
-
-	private void outputSpinsByArtist(String filePath, Map<String, List<Spin>> spinsByArtist) throws Exception {
-		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
-		writer.write("WXPN");
-		writer.newLine();
-		writer.close();
-		
-		for (List<Spin> spinsToPrint : spinsByArtist.values()) {
-			writeSpinsToFile(spinsToPrint, filePath);
-		}
-	}
-
-	public	Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
-		Map<String, String> postData = new HashMap<>();
-		String artist = (String) currentArtist.getArtistName();
-		postData.put("val", "search");
-		postData.put("search", artist);
-		postData.put("playlist", "all");
-		
-		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
-		
-		Elements spinData = null;
-		
-		spinData = (page.select(String.format("td:containsOwn(%s)", songOrAlbumName)));
-		System.out.println("*** Retrieved " + artist + " spins: " + spinData.text());
-		
-		
-		return spinData;
-	}
-	
-	public static void addArtistInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
+	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, ArrayList<ArtistInfo> artistInfos) {
 		String[] fullAlbum = {};
 		
 		if (line.indexOf(delim) != -1) {
@@ -219,7 +145,88 @@ abstract public class SpinSearch {
 			artistInfo.setSingleOnly(true);		
 			artistInfos.add(artistInfo);
 		}
+			return artistInfo;
 	}
+		
+		return null;
+	}
+	
+	
+	public void spinSearch(String url, ArrayList <ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
+		Map<String, List<Spin>> spinsByArtist = getSpins(url, artistInfos, firstDayOfWeek, lastDayOfWeek, filePath);
+		outputSpinsByArtist(filePath, spinsByArtist);
+	}
+	
+	public static Date parseFirstDayOfWeek(String line) {
+		Date firstDayOfWeek = null;
+		if(line.indexOf("Date:") != -1) {
+			String[] segments = line.substring(6).split(" - ");
+			firstDayOfWeek = parseDateAndTime(segments[0]);
+		}
+		return firstDayOfWeek;
+	}
+	
+	public static Date parseLastDayOfWeek(String line) {
+		Date lastDayOfWeek = null;
+		if(line.indexOf("Date:") != -1) {
+			String[] segments = line.substring(6).split(" - ");
+			lastDayOfWeek = parseDateAndTime(segments[1]);
+		}
+		return lastDayOfWeek;
+	}
+
+	
+	public Map<String, List<Spin>> getSpins(String url, ArrayList <ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
+		ArrayList<ArtistInfo> artistsToSearch = artistInfos;
+		Map<String, Spin> allSpins = new HashMap<>();
+
+		for (ArtistInfo currentArtist : artistsToSearch) {
+
+			if (currentArtist.isSingleOnly()) {
+				for (String song : currentArtist.getSongs()) {
+					Elements spinData = getSpinData(currentArtist, url, song);
+					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+				}
+			}
+			else {
+				Elements spinData = getSpinData(currentArtist, url, currentArtist.getAlbum());
+				addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+			}
+		}
+		
+		Map<String, List<Spin>> spinsByArtist = getSpinsByArtist(allSpins.values());
+		
+		return spinsByArtist;
+
+	}
+
+	public void outputSpinsByArtist(String filePath, Map<String, List<Spin>> spinsByArtist) throws Exception {
+		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+		writer.write("WXPN");
+		writer.newLine();
+		writer.close();
+		
+		for (List<Spin> spinsToPrint : spinsByArtist.values()) {
+			writeSpinsToFile(spinsToPrint, filePath);
+		}
+	}
+
+	public	Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
+		Map<String, String> postData = new HashMap<>();
+		String artist = (String) currentArtist.getArtistName();
+		postData.put("val", "search");
+		postData.put("search", artist);
+		postData.put("playlist", "all");
+		
+		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
+		
+		Elements spinData = null;
+		
+		spinData = (page.select(String.format("td:containsOwn(%s)", songOrAlbumName)));
+		System.out.println("*** Retrieved " + artist + " spins: " + spinData.text());
+		
+		
+		return spinData;
 	}
 
 	private static void removeQuotes(ArtistInfo artistInfo, String[] songs) {
@@ -247,7 +254,7 @@ abstract public class SpinSearch {
 	
 	
 
-	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
+	private void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
 		for (Element e : spinData) {
 			String[] segments = e.text().split(" - ");
 			String song = segments[1];
@@ -281,7 +288,6 @@ abstract public class SpinSearch {
 		}
 	}
 	
-	
 	public static boolean isDateInRange(Date firstDayOfWeek, Date lastDayOfWeek, Date spinDate) {
 		if ((spinDate.after(firstDayOfWeek) || spinDate.equals(firstDayOfWeek)) && (spinDate.before(lastDayOfWeek) || spinDate.equals(lastDayOfWeek))){
 			return true;
@@ -308,7 +314,7 @@ abstract public class SpinSearch {
 		return spins;
 	}
 
-	private void writeSpinsToFile(List<Spin> values, String filePath) throws Exception {
+	public void writeSpinsToFile(List<Spin> values, String filePath) throws Exception {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
 		
 		if(values.size() > 0) {
