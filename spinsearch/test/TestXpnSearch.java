@@ -1,7 +1,9 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TimeZone;
 
 import org.junit.jupiter.api.Test;
@@ -27,25 +29,28 @@ class TestXpnSearch {
 	
 	void addArtistInfoStoresArtistNameCorrectly() {
 		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
-		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
+		String artistName = "Nothing";
+		Map <String, ArtistInfo> artistInfos = new HashMap<>();
 		SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
-		ArtistInfo artistInfo = artistInfos.get(0);
+		ArtistInfo artistInfo = artistInfos.get(artistName);
 		assertEquals(artistInfo.getArtistName(), "Nothing");
 	}
 	
 	void addArtistInfoStoresAlbumCorrectly() {
 		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
-		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
+		String artistName = "Nothing";
+		Map <String, ArtistInfo> artistInfos = new HashMap<>();
 		SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
-		ArtistInfo artistInfo = artistInfos.get(0);
+		ArtistInfo artistInfo = artistInfos.get(artistName);
 		assertEquals(artistInfo.getAlbum(), "The Great Dismal");
 	}
 	
 	void addArtistInfoStoresSongsCorrectly() {
 		String artistInfoToStore = "Nothing <> Bernie Sanders + Say Less <> Relapse Records";
-		ArrayList<ArtistInfo> artistInfos = new ArrayList<ArtistInfo>();
+		String artistName = "Nothing";
+		Map <String, ArtistInfo> artistInfos = new HashMap<>();
 		SpinSearch.addAlbumInfo(artistInfoToStore, true, "<>", artistInfos);
-		ArtistInfo artistInfo = artistInfos.get(0);
+		ArtistInfo artistInfo = artistInfos.get(artistName);
 		String[] songs = {"Bernie Sanders" , "Say Less"};
 		assertEquals(artistInfo.getSongs(), songs);
 	}
