@@ -262,20 +262,22 @@ abstract public class SpinSearch {
 		return spinData;
 	}
 
-	private static void removeQuotes(ArtistInfo artistInfo, String[] songs) {
-		for (int i = 0; i < artistInfo.getSongs().length; i++) {
-			System.out.println("Parsing song: " + songs[i]);
-			songs[i] = songs[i].substring(1, songs[i].length()-1);
+	private static void removeQuotes(ArtistInfo artistInfo, ArrayList <String> songs) {
+		for (int i = 0; i < artistInfo.getSongs().size(); i++) {
+			System.out.println("Parsing song: " + songs.get(i));
+			songs.set(i, songs.get(i).substring(1, songs.get(i).length()-1));
 		}
 	}
 
 	private static void setSongs(String songs, ArtistInfo artistInfo) {
 		if(songs.indexOf(" + ") != -1) {
-			artistInfo.setSongs(songs.split("\s\\+\s"));
+			for (String song : songs.split("\s\\+\s")) {
+				artistInfo.addSong(song);
+			}
 		}
 		
 		else {
-			artistInfo.setSongs(new String[] {songs});
+			artistInfo.addSong(songs);
 		}
 	}
 	

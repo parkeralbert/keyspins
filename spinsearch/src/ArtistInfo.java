@@ -18,6 +18,10 @@ public class ArtistInfo {
 	public void setSongs(ArrayList<String> songs) {
 		this.songs = songs;
 	}
+	public void addSong(String song) {
+		this.songs.add(song);
+	}
+	
 	public String getArtistName() {
 		return artistName;
 	}
