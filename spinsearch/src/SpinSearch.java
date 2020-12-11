@@ -107,19 +107,22 @@ abstract public class SpinSearch {
         
 	}
 	
-	public Map<String, List<Spin>> storeSongs(String songsInAlbumsFilePath){
+	public Map<String, List<Spin>> storeSongs(String songsInAlbumsFilePath, String delim){
+		Map<String, List<Spin>> songsForEachAlbum= new HashMap<>();
 		String line = null;
-		
+		String album = null;
 		try
 		{
 			BufferedReader albumReader = new BufferedReader(new FileReader(songsInAlbumsFilePath));
 			while ((line = albumReader.readLine()) != null)
 			{
 				
-				if (line.equalsIgnoreCase("singles:")) {
-					singleOnly = true;
+				if (line.contains("Album")) {
+					album = line.split(": ")[1];
 				}
-				
+				if(album != null && line.contains(delim)) {
+					
+				}
 				ArtistInfo currentArtist = addAlbumInfo(line, singleOnly, delim, artistInfos);
 				
 			}
