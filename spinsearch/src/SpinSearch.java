@@ -120,7 +120,7 @@ abstract public class SpinSearch {
         
 	}
 	
-	public void storeSongs(String delim, Map<String, ArtistInfo> artistInfos, String line){
+	public String currentArtist storeSongs(String delim, Map<String, ArtistInfo> artistInfos, String line, String currentArtist){
 		String artist = null;
 		String song = null;
 				
@@ -128,7 +128,7 @@ abstract public class SpinSearch {
 					artist = line.split(" " + delim + " ")[1];
 					
 				}
-				if(artist != null && line.contains(delim) && !line.contains("Artist: ")) {
+				if(artist != null && line.contains(delim) && !line.contains("Artist")) {
 					song = line.split(" " + delim + " ")[1];
 					artistInfos.get(artist).addSong(song);
 				}
