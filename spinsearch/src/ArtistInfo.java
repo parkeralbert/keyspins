@@ -16,9 +16,15 @@ public class ArtistInfo {
 		return songs;
 	}
 	public void setSongs(ArrayList<String> songs) {
+		if(this.songs == null) {
+			this.songs = new ArrayList<String>();
+		}
 		this.songs = songs;
 	}
 	public void addSong(String song) {
+		if(this.songs == null) {
+			this.songs = new ArrayList<String>();
+		}
 		this.songs.add(song);
 	}
 	

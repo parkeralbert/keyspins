@@ -1,6 +1,4 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;

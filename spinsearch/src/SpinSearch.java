@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -94,7 +93,7 @@ abstract public class SpinSearch {
 					singleOnly = true;
 				}
 				
-				ArtistInfo currentArtist = addAlbumInfo(line, singleOnly, delim, artistInfos);
+				addAlbumInfo(line, singleOnly, delim, artistInfos);
 				
 			}
 			albumReader.close();
@@ -112,6 +111,11 @@ abstract public class SpinSearch {
 			System.err.println("Error: " + e);
 			e.printStackTrace();
 		}
+		for (String artistToPull : artistInfos.keySet()) {
+			ArtistInfo currentArtist = artistInfos.get(artistToPull);
+			System.out.println(currentArtist.getArtistName() + " songs: " + currentArtist.getSongs());
+		}
+		
 		return artistInfos;
         
 	}
@@ -132,7 +136,7 @@ abstract public class SpinSearch {
 		
 	}
 	
-	public static ArtistInfo addAlbumInfo(String line, boolean singleOnly, String delim, Map<String, ArtistInfo> artistInfos) {
+	public static void addAlbumInfo(String line, boolean singleOnly, String delim, Map<String, ArtistInfo> artistInfos) {
 		ArrayList <String> fullAlbum = null;
 		
 		if (line.indexOf(delim) != -1) {
@@ -169,10 +173,8 @@ abstract public class SpinSearch {
 			artistInfo.setSingleOnly(true);		
 			artistInfos.put(artistInfo.getArtistName(), artistInfo);
 		}
-			return artistInfo;
 	}
 		
-		return null;
 	}
 	
 	
