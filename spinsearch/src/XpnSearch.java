@@ -35,45 +35,54 @@ public class XpnSearch extends SpinSearch {
 	}
 	
 	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
-		for (Element e : spinData) {
-			boolean correctAlbum = true;
-			String[] segments = e.text().split(" - ");
-			if(artistInfo.getArtistName() == artistInfo.getAlbum()) {
-				if(segments[2] != artistInfo.getAlbum()) {
-					correctAlbum = false;
+		if(spinData != null) {
+			for (Element e : spinData) {
+				boolean correctAlbum = true;
+				String[] segments = null;
+				if(e.text().split(" - ").length > 1) {
+					segments = e.text().split(" - ");
 				}
-			}
-		if (correctAlbum)	{
-			String song = segments[1];
-			SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
-			Date spinDate = formatter.parse(segments[0].substring(0, 19));
-			
-			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)){
-				System.out.println("song is " + song + " date is " + spinDate);
-				String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
-				Spin spin = allSpins.get(key);
-				
-				if (spin == null) {
-					spin = new Spin(artistInfo.getArtistName(), song, artistInfo.getAlbum(), spinDate, spinDate);
-					spin.setDj("Kristen Kurtis");
-				} 
 				else {
-					if (spinDate.before(spin.getFirstPlayDate())) {
-						spin.setFirstPlayDate(spinDate);
-					}
-					if (spinDate.after(spin.getLastPlayDate())) {
-						spin.setLastPlayDate(spinDate);
+					return;
+				}
+				if(artistInfo.getArtistName() == artistInfo.getAlbum()) {
+					if(segments[2] != artistInfo.getAlbum()) {
+						correctAlbum = false;
 					}
 				}
+			if (correctAlbum)	{
+				String song = segments[1];
+				SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
+				Date spinDate = formatter.parse(segments[0].substring(0, 19));
 				
-				spin.incrementCount();
+				if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)){
+					System.out.println("song is " + song + " date is " + spinDate);
+					String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
+					Spin spin = allSpins.get(key);
+					
+					if (spin == null) {
+						spin = new Spin(artistInfo.getArtistName(), song, artistInfo.getAlbum(), spinDate, spinDate);
+						spin.setDj("Kristen Kurtis");
+					} 
+					else {
+						if (spinDate.before(spin.getFirstPlayDate())) {
+							spin.setFirstPlayDate(spinDate);
+						}
+						if (spinDate.after(spin.getLastPlayDate())) {
+							spin.setLastPlayDate(spinDate);
+						}
+					}
+					
+					spin.incrementCount();
 
-				System.out.println("*** SPIN TO WRITE: " + e.text());
-				allSpins.put(key, spin);
+					System.out.println("*** SPIN TO WRITE: " + e.text());
+					allSpins.put(key, spin);
+				}
+			}
+
 			}
 		}
 
-		}
 	}
 	
 	public void outputSpinsByArtist(String filePath, Map<String, List<Spin>> spinsByArtist) throws Exception {
