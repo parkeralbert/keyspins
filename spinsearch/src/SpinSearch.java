@@ -205,19 +205,17 @@ abstract public class SpinSearch {
 		
 	    for (String artistToPull : artistInfos.keySet()) {
 	    	ArtistInfo currentArtist = artistInfos.get(artistToPull);
-	        if (nextArtist.getValue().isSingleOnly()) {
-				for (String song : nextArtist.getSongs()) {
-					Elements spinData = getSpinData(nextArtist, url, song);
-					addSpin(spinData, nextArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+	        if (currentArtist.isSingleOnly()) {
+				for (String song : currentArtist.getSongs()) {
+					Elements spinData = getSpinData(currentArtist, url, song);
+					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
 				}
 			}
 			else {
-				Elements spinData = getSpinData(nextArtist, url, nextArtist.getAlbum());
-				addSpin(spinData, nextArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+				Elements spinData = getSpinData(currentArtist, url, currentArtist.getAlbum());
+				addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
 			}        
 	        
-	        
-	        it.remove(); // avoids a ConcurrentModificationException
 	    }
 		
 		Map<String, List<Spin>> spinsByArtist = getSpinsByArtist(allSpins.values());
