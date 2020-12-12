@@ -128,14 +128,13 @@ abstract public class SpinSearch {
 					artist = line.split(" " + delim + " ")[1];
 					
 				}
-				if(artist != null && line.contains(delim)) {
+				if(artist != null && line.contains(delim) && !line.contains("Artist: ")) {
 					song = line.split(" " + delim + " ")[1];
 					artistInfos.get(artist).addSong(song);
 				}
 
 		
 	}
-	
 	public static void addAlbumInfo(String line, boolean singleOnly, String delim, Map<String, ArtistInfo> artistInfos) {
 		ArrayList <String> fullAlbum = null;
 		
@@ -281,7 +280,7 @@ abstract public class SpinSearch {
 	
 	
 
-	private void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
+	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
 		for (Element e : spinData) {
 			String[] segments = e.text().split(" - ");
 			String song = segments[1];

@@ -6,8 +6,8 @@ public class SpinTest {
 	
 	public static void main(String[] args) throws Exception
     {
-		String albumsInputPath = "new_spin_inputs.txt";
-		String songsInputPath = "songs_list.txt";
+		String albumsInputPath = "album_input.txt";
+		String songsInputPath = "song_input.txt";
 		String writePath = "spins.txt";
 		String delim = "<>";
         XpnSearch xpn = new XpnSearch();
