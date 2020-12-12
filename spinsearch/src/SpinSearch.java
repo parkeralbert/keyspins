@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -200,22 +201,24 @@ abstract public class SpinSearch {
 
 	
 	public Map<String, List<Spin>> getSpins(String url, Map <String, ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
-		ArrayList<ArtistInfo> artistsToSearch = artistInfos;
 		Map<String, Spin> allSpins = new HashMap<>();
-
-		for (ArtistInfo currentArtist : artistsToSearch) {
-
-			if (currentArtist.isSingleOnly()) {
-				for (String song : currentArtist.getSongs()) {
-					Elements spinData = getSpinData(currentArtist, url, song);
-					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+		
+	    for (String artistToPull : artistInfos.keySet()) {
+	    	ArtistInfo currentArtist = artistInfos.get(artistToPull);
+	        if (nextArtist.getValue().isSingleOnly()) {
+				for (String song : nextArtist.getSongs()) {
+					Elements spinData = getSpinData(nextArtist, url, song);
+					addSpin(spinData, nextArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
 				}
 			}
 			else {
-				Elements spinData = getSpinData(currentArtist, url, currentArtist.getAlbum());
-				addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
-			}
-		}
+				Elements spinData = getSpinData(nextArtist, url, nextArtist.getAlbum());
+				addSpin(spinData, nextArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+			}        
+	        
+	        
+	        it.remove(); // avoids a ConcurrentModificationException
+	    }
 		
 		Map<String, List<Spin>> spinsByArtist = getSpinsByArtist(allSpins.values());
 		
