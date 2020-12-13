@@ -12,7 +12,25 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class WfmuSearch extends SpinSearch {
-	public	 Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
+	public Map<String, List<Spin>> getSpins(String url, Map <String, ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
+		Map<String, Spin> allSpins = new HashMap<>();
+		
+	    for (String artistToPull : artistInfos.keySet()) {
+	    	ArtistInfo currentArtist = artistInfos.get(artistToPull);
+				for (String song : currentArtist.getSongs()) {
+					Elements spinData = getSpinData(currentArtist, url, song);
+					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+				}
+	        
+	    }
+		
+		Map<String, List<Spin>> spinsByArtist = getSpinsByArtist(allSpins.values());
+		
+		return spinsByArtist;
+
+	}
+	
+	public	 Elements getSpinData(ArtistInfo currentArtist, String url, String songName) throws Exception {
 		Map<String, String> postData = new HashMap<>();
 		String artist = (String) currentArtist.getArtistName();
 		postData.put("artistonly", artist);
@@ -20,7 +38,8 @@ public class WfmuSearch extends SpinSearch {
 		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
 		
 		Elements spinData = new Elements();
-		Elements rawData = page.select(String.format("tr:contains(%s)", songOrAlbumName));
+		songName = songName.replaceAll("\'", "\\'");
+		Elements rawData = page.select(String.format("tr:contains(%s)", songName));
 		
 		if(rawData.size() > 1) {
 			spinData = new Elements(rawData.subList(1, rawData.size())) ;

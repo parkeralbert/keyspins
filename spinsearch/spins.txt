@@ -44,10 +44,3 @@ Spun "Glowing in the Dark" x1 11/24
 Arlo Parks
 Spun "Black Dog" x5 11/24-11/30
 
-WXPN
-Django Django
-Spun "Glowing in the Dark" x1 11/24
-
-Arlo Parks
-Spun "Black Dog" x5 11/24-11/30
-

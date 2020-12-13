@@ -322,7 +322,7 @@ abstract public class SpinSearch {
 		}
 	}
 
-	private static Map<String, List<Spin>> getSpinsByArtist(Collection<Spin> values) {
+	public static Map<String, List<Spin>> getSpinsByArtist(Collection<Spin> values) {
 		
 		Map<String, List<Spin>> spins = new HashMap<>();
 		
