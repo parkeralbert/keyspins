@@ -30,6 +30,16 @@ public class WfmuSearch extends SpinSearch {
 
 	}
 	
+	public String escapeApostrophes(String str, char ch, int position) {
+		int i = str.indexOf('x');
+		StringBuilder sb = new StringBuilder(str);
+		while(i >= 0) {
+		    sb.insert(position, ch);
+		     i = str.indexOf('x', i+1);
+		}
+	    return sb.toString();
+		
+	}
 	public	 Elements getSpinData(ArtistInfo currentArtist, String url, String songName) throws Exception {
 		Map<String, String> postData = new HashMap<>();
 		String artist = (String) currentArtist.getArtistName();
@@ -38,7 +48,14 @@ public class WfmuSearch extends SpinSearch {
 		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
 		
 		Elements spinData = new Elements();
-		songName = songName.replaceAll("\'", "\\'");
+		songName = songName.replaceAll("'", "\'");
+		if (songName.contains("'")) {
+			songName.index
+		}
+		if (songName.equals("Don't Laugh At Me ")) {
+			songName = "Don\\'t Laugh At Me";
+		}
+		System.out.println("New song name: " + songName);
 		Elements rawData = page.select(String.format("tr:contains(%s)", songName));
 		
 		if(rawData.size() > 1) {
