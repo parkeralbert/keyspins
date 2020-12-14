@@ -9,5 +9,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/parkeralbert/Downloads/jsoup-1.13.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="/Users/parkeralbert/Downloads/commons-text-1.9/commons-text-1.9.jar"/>
+	<classpathentry kind="lib" path="/Users/parkeralbert/Downloads/commons-lang3-3.11/commons-lang3-3.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
