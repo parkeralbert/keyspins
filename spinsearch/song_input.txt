@@ -7,17 +7,3 @@ Artist <> Cabaret Voltaire
 6 <> Universal Energy
 7 <> Vasto
 8 <> What's Goin' On
-
-Artist <> Mamalarky
-1 <> Fury
-2 <> You Make Me Smile
-3 <> Schism Trek
-4 <> Cosine
-5 <> Big Trouble
-6 <> Hero
-7 <> Almighty Heat
-8 <> Singalong
-9 <> Drug Store Model
-10 <> Don't Laugh At Me
-
-
