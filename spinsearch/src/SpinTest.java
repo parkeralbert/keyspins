@@ -21,9 +21,9 @@ public class SpinTest {
         	System.out.println("No last date found");
         }
 		System.out.println("This week is " + firstDayOfWeek + " - " + lastDayOfWeek);
-		//Map <String, ArtistInfo> xpnSearchList =  xpn.getArtistList(albumsInputPath, songsInputPath, delim);
+		Map <String, ArtistInfo> xpnSearchList =  xpn.getArtistList(albumsInputPath, songsInputPath, delim);
 		Map <String, ArtistInfo> wfmuSearchList =  wfmu.getArtistList(albumsInputPath, songsInputPath, delim);
         wfmu.spinSearch("https://wfmu.org/search.php?action=searchbasic", wfmuSearchList, firstDayOfWeek, lastDayOfWeek, writePath);
-        //xpn.spinSearch("https://xpn.org/playlists/playlist-search", xpnSearchList, firstDayOfWeek, lastDayOfWeek, writePath);
+        xpn.spinSearch("https://xpn.org/playlists/playlist-search", xpnSearchList, firstDayOfWeek, lastDayOfWeek, writePath);
     }
 }

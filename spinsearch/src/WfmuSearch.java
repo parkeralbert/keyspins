@@ -71,6 +71,7 @@ public class WfmuSearch extends SpinSearch {
 			correctArtist = singleSpinData.get(0).text().equalsIgnoreCase(artistInfo.getArtistName());
 			correctSong = singleSpinData.get(1).text().equalsIgnoreCase(songToMatch);
 			
+			
 		if (correctArtist && correctSong)	{
 			SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy");
 			Date spinDate = null;
