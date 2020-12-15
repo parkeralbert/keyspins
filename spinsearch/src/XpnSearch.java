@@ -21,7 +21,7 @@ public class XpnSearch extends SpinSearch {
 	    	ArtistInfo currentArtist = artistInfos.get(artistToPull);
 				for (String song : currentArtist.getSongs()) {
 					Elements spinData = getSpinData(currentArtist, url, song);
-					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins, song);
 				}
 	        
 	    }
@@ -48,10 +48,11 @@ public class XpnSearch extends SpinSearch {
 		return spinData;
 	}
 	
-	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
+	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins, String songToMatch) throws Exception   {
 		if(spinData != null) {
 			for (Element e : spinData) {
-				boolean correctAlbum = true;
+				boolean correctSong;
+				boolean correctArtist;
 				String[] segments = null;
 				if(e.text().split(" - ").length > 1) {
 					segments = e.text().split(" - ");
@@ -63,18 +64,15 @@ public class XpnSearch extends SpinSearch {
 				
 				SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
 				Date spinDate = formatter.parse(segments[0].substring(0, 19));
-				
-				if(isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)) {
-					
-				
-				if(artistInfo.getArtistName().equalsIgnoreCase(artistInfo.getAlbum())) {
-					if(segments[2] != artistInfo.getAlbum()) {
-						correctAlbum = false;
-					}
-				}
-			if (correctAlbum)	{
 				String song = segments[1];
 				String artistName = segments[0].substring(20).trim();
+				
+				correctSong = song.equalsIgnoreCase(songToMatch);
+				correctArtist = artistName.equalsIgnoreCase(artistInfo.getArtistName());
+				
+		if(isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)) {
+					
+			if (correctSong && correctArtist)	{
 			
 				if (artistName.equalsIgnoreCase(artistInfo.getArtistName())){
 					System.out.println("song is " + song + " date is " + spinDate);
@@ -100,7 +98,7 @@ public class XpnSearch extends SpinSearch {
 					allSpins.put(key, spin);
 				}
 			}
-			}
+		}
 
 			}
 		}

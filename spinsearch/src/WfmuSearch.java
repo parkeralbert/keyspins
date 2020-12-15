@@ -20,7 +20,7 @@ public class WfmuSearch extends SpinSearch {
 	    	ArtistInfo currentArtist = artistInfos.get(artistToPull);
 				for (String song : currentArtist.getSongs()) {
 					Elements spinData = getSpinData(currentArtist, url, song);
-					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins, song);
 				}
 	        
 	    }
@@ -53,26 +53,25 @@ public class WfmuSearch extends SpinSearch {
 		Elements rawData = page.select(String.format("tr:contains(%s)", songName));
 		
 		if(rawData.size() > 1) {
-			spinData = new Elements(rawData.subList(1, rawData.size())) ;
+			spinData = new Elements(rawData.subList(1, rawData.size()));
 		}
 		
 		return spinData;
 	}
 	
-	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins) throws Exception   {
+	public void addSpin(Elements spinData, ArtistInfo artistInfo, Date firstDayOfWeek, Date lastDayOfWeek, Map<String, Spin> allSpins, String songToMatch) throws Exception   {
 		if (spinData.hasText()) {
 			System.out.println("Retrieved " + artistInfo.getArtistName() + " spins: " + spinData.text());
 		}
 		for (Element e : spinData) {
-			boolean correctAlbum = true;
+			boolean correctArtist = false;
+			boolean correctSong = false;
 			Elements singleSpinData = e.children();
 			
-			if(artistInfo.getArtistName() == artistInfo.getAlbum()) {
-				if(!singleSpinData.get(2).text().equalsIgnoreCase(artistInfo.getAlbum())) {
-					correctAlbum = false;
-				}
-			}
-		if (correctAlbum)	{
+			correctArtist = singleSpinData.get(0).text().equalsIgnoreCase(artistInfo.getArtistName());
+			correctSong = singleSpinData.get(1).text().equalsIgnoreCase(songToMatch);
+			
+		if (correctArtist && correctSong)	{
 			SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy");
 			Date spinDate = null;
 			if(singleSpinData.size() == 4) {
@@ -81,17 +80,11 @@ public class WfmuSearch extends SpinSearch {
 			if (singleSpinData.size() == 5) {
 				spinDate = formatter.parse(singleSpinData.get(4).text());
 			}
-			String artistName = singleSpinData.get(0).text();
-			artistName.replaceAll("\\p{Pf}", "'");
-			if (artistName.indexOf(0x2019) != -1) {
-				System.out.println("Found it");
-			}
-				
-			char apos = artistName.charAt(6);
-			System.out.println("Character: " + apos + Integer.toHexString(apos));
+			
+			String artistName = replaceSmartQuotes(singleSpinData.get(0).text());
 			
 			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate) && artistName.equalsIgnoreCase(artistInfo.getArtistName())){
-				String song = singleSpinData.get(1).text();
+				String song = singleSpinData.get(1).text().trim();
 				String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
 				Spin spin = allSpins.get(key);
 				
@@ -116,6 +109,20 @@ public class WfmuSearch extends SpinSearch {
 		}
 
 		}
+	}
+	
+	private static String replaceSmartQuotes(String input) {
+		StringBuilder output = new StringBuilder();
+		
+		for (char c : input.toCharArray()) {
+			if (c == 0x2018 || c == 0x2019) {
+				output.append('\'');
+			}
+			else {
+				output.append(c);
+			}
+		}
+		return output.toString();
 	}
 	
 	public void outputSpinsByArtist(String filePath, Map<String, List<Spin>> spinsByArtist) throws Exception {

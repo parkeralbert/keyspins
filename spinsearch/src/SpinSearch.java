@@ -125,10 +125,10 @@ abstract public class SpinSearch {
 		String song = null;
 				if (line.contains("Artist")) {
 					currentArtist = line.split(" " + delim + " ")[1];
-					
 				}
 				if(currentArtist != null && line.contains(delim) && !line.contains("Artist")) {
 					song = line.split(" " + delim + " ")[1];
+					System.out.println("Artist is " + currentArtist);
 					artistInfos.get(currentArtist).addSong(song);
 				}
 		return currentArtist;
