@@ -1,9 +1,2 @@
-Artist <> Cabaret Voltaire
-1 <> Be Free
-2 <> The Power (Of Their Knowledge)
-3 <> Night Of The Jackal
-4 <> Microscopic Flesh Fragment
-5 <> Papa Nine Zero Delta United
-6 <> Universal Energy
-7 <> Vasto
-8 <> What's Goin' On
+Artist <> Wilson's Prom
+2 <> Love Fool

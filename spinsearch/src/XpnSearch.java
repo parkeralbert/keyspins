@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.text.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -13,7 +14,25 @@ import org.jsoup.select.Elements;
 
 public class XpnSearch extends SpinSearch {
 	
-	public  Elements getSpinData(ArtistInfo currentArtist, String url, String songOrAlbumName) throws Exception {
+	public Map<String, List<Spin>> getSpins(String url, Map <String, ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
+		Map<String, Spin> allSpins = new HashMap<>();
+		
+	    for (String artistToPull : artistInfos.keySet()) {
+	    	ArtistInfo currentArtist = artistInfos.get(artistToPull);
+				for (String song : currentArtist.getSongs()) {
+					Elements spinData = getSpinData(currentArtist, url, song);
+					addSpin(spinData, currentArtist, firstDayOfWeek, lastDayOfWeek, allSpins);
+				}
+	        
+	    }
+		
+		Map<String, List<Spin>> spinsByArtist = getSpinsByArtist(allSpins.values());
+		
+		return spinsByArtist;
+
+	}
+	
+	public  Elements getSpinData(ArtistInfo currentArtist, String url, String songName) throws Exception {
 		Map<String, String> postData = new HashMap<>();
 		String artist = (String) currentArtist.getArtistName();
 		postData.put("val", "search");
@@ -23,13 +42,8 @@ public class XpnSearch extends SpinSearch {
 		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
 		
 		Elements spinData = null;
-		
-		spinData = (page.select(String.format("td:containsOwn(%s)", songOrAlbumName)));
-		
-		if(spinData != null){
-			System.out.println("Retrieved " + artist + " spins: " + spinData.text());
-		}
-		
+		songName = StringEscapeUtils.escapeEcmaScript(songName);
+		spinData = (page.select(String.format("td:containsOwn(%s)", songName)));
 		
 		return spinData;
 	}
@@ -41,21 +55,28 @@ public class XpnSearch extends SpinSearch {
 				String[] segments = null;
 				if(e.text().split(" - ").length > 1) {
 					segments = e.text().split(" - ");
+					//only use for testing: System.out.println("Retrieved " + artistInfo.getArtistName() + " spins: " + spinData.text() + " for " + segments[1]);
 				}
 				else {
 					return;
 				}
-				if(artistInfo.getArtistName() == artistInfo.getAlbum()) {
+				
+				SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
+				Date spinDate = formatter.parse(segments[0].substring(0, 19));
+				
+				if(isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)) {
+					
+				
+				if(artistInfo.getArtistName().equalsIgnoreCase(artistInfo.getAlbum())) {
 					if(segments[2] != artistInfo.getAlbum()) {
 						correctAlbum = false;
 					}
 				}
 			if (correctAlbum)	{
 				String song = segments[1];
-				SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
-				Date spinDate = formatter.parse(segments[0].substring(0, 19));
-				
-				if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)){
+				String artistName = segments[0].substring(20).trim();
+			
+				if (artistName.equalsIgnoreCase(artistInfo.getArtistName())){
 					System.out.println("song is " + song + " date is " + spinDate);
 					String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
 					Spin spin = allSpins.get(key);
@@ -78,6 +99,7 @@ public class XpnSearch extends SpinSearch {
 					System.out.println("*** SPIN TO WRITE: " + e.text());
 					allSpins.put(key, spin);
 				}
+			}
 			}
 
 			}

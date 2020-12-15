@@ -314,7 +314,7 @@ abstract public class SpinSearch {
 	}
 	
 	public static boolean isDateInRange(Date firstDayOfWeek, Date lastDayOfWeek, Date spinDate) {
-		if ((spinDate.after(firstDayOfWeek) || spinDate.equals(firstDayOfWeek)) && (spinDate.before(lastDayOfWeek) || spinDate.equals(lastDayOfWeek))){
+		if (spinDate != null && (spinDate.after(firstDayOfWeek) || spinDate.equals(firstDayOfWeek)) && (spinDate.before(lastDayOfWeek) || spinDate.equals(lastDayOfWeek))){
 			return true;
 		}
 		else {

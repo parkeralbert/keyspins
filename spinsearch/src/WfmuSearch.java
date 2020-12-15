@@ -37,11 +37,19 @@ public class WfmuSearch extends SpinSearch {
 		String artist = (String) currentArtist.getArtistName();
 		postData.put("artistonly", artist);
 		
-		Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
+	//	Document page = Jsoup.connect(url).userAgent(USER_AGENT).data(postData).post();
 		
 		Elements spinData = new Elements();
-		songName = StringEscapeUtils.escapeEcmaScript(songName);
+		if(songName.indexOf("'") != -1) {
+			songName = StringEscapeUtils.escapeEcmaScript(songName);
+		}
+
 		System.out.println("New song name: " + songName);
+		
+		String queryName = currentArtist.getArtistName().replaceAll(" ", "+");	
+		queryName = queryName.replaceAll("&", "%26");
+		String sortUrl = "https://wfmu.org/search.php?action=searchbasic&sinputs=%5B%22or%22%2C%7B%22Artist%22%3A%22starts%22%2C%22Song+title%22%3A%22starts%22%2C%22Album+title%22%3A%22starts%22%2C%22Comments%22%3A%22starts%22%7D%2Cnull%2C%7B%22Artist%22%3A%22" + queryName + "%22%7D%2Cnull%2C347%2C5%2C%22" + queryName + "%22%2Cnull%2Cnull%5D&page=0&sort=Playlist%20links";
+		Document page = Jsoup.connect(sortUrl).userAgent(USER_AGENT).data(postData).post();
 		Elements rawData = page.select(String.format("tr:contains(%s)", songName));
 		
 		if(rawData.size() > 1) {
@@ -73,8 +81,16 @@ public class WfmuSearch extends SpinSearch {
 			if (singleSpinData.size() == 5) {
 				spinDate = formatter.parse(singleSpinData.get(4).text());
 			}
+			String artistName = singleSpinData.get(0).text();
+			artistName.replaceAll("\\p{Pf}", "'");
+			if (artistName.indexOf(0x2019) != -1) {
+				System.out.println("Found it");
+			}
+				
+			char apos = artistName.charAt(6);
+			System.out.println("Character: " + apos + Integer.toHexString(apos));
 			
-			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)){
+			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate) && artistName.equalsIgnoreCase(artistInfo.getArtistName())){
 				String song = singleSpinData.get(1).text();
 				String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
 				Spin spin = allSpins.get(key);
