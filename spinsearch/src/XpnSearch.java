@@ -64,8 +64,8 @@ public class XpnSearch extends SpinSearch {
 				
 				SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm a");
 				Date spinDate = formatter.parse(segments[0].substring(0, 19));
-				String song = segments[1];
-				String artistName = segments[0].substring(20).trim();
+				String song = replaceSmartQuotes(segments[1]);
+				String artistName = replaceSmartQuotes(segments[0].substring(20).trim());
 				
 				correctSong = song.equalsIgnoreCase(songToMatch);
 				correctArtist = artistName.equalsIgnoreCase(artistInfo.getArtistName());

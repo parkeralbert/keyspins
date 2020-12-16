@@ -68,8 +68,11 @@ public class WfmuSearch extends SpinSearch {
 			boolean correctSong = false;
 			Elements singleSpinData = e.children();
 			
-			correctArtist = singleSpinData.get(0).text().equalsIgnoreCase(artistInfo.getArtistName());
-			correctSong = singleSpinData.get(1).text().equalsIgnoreCase(songToMatch);
+			String artistName = replaceSmartQuotes(singleSpinData.get(0).text());
+			String song = replaceSmartQuotes(singleSpinData.get(1).text().trim());
+			
+			correctArtist = artistName.equalsIgnoreCase(artistInfo.getArtistName());
+			correctSong = song.equalsIgnoreCase(songToMatch);
 			
 			
 		if (correctArtist && correctSong)	{
@@ -81,11 +84,9 @@ public class WfmuSearch extends SpinSearch {
 			if (singleSpinData.size() == 5) {
 				spinDate = formatter.parse(singleSpinData.get(4).text());
 			}
-			
-			String artistName = replaceSmartQuotes(singleSpinData.get(0).text());
+		
 			
 			if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate) && artistName.equalsIgnoreCase(artistInfo.getArtistName())){
-				String song = singleSpinData.get(1).text().trim();
 				String key = artistInfo.getArtistName() + artistInfo.getAlbum() + song;
 				Spin spin = allSpins.get(key);
 				
@@ -112,7 +113,7 @@ public class WfmuSearch extends SpinSearch {
 		}
 	}
 	
-	private static String replaceSmartQuotes(String input) {
+	public static String replaceSmartQuotes(String input) {
 		StringBuilder output = new StringBuilder();
 		
 		for (char c : input.toCharArray()) {

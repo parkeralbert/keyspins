@@ -199,6 +199,19 @@ abstract public class SpinSearch {
 		return lastDayOfWeek;
 	}
 
+	public static String replaceSmartQuotes(String input) {
+		StringBuilder output = new StringBuilder();
+		
+		for (char c : input.toCharArray()) {
+			if (c == 0x2018 || c == 0x2019) {
+				output.append('\'');
+			}
+			else {
+				output.append(c);
+			}
+		}
+		return output.toString();
+	}
 	
 	public Map<String, List<Spin>> getSpins(String url, Map <String, ArtistInfo> artistInfos, Date firstDayOfWeek, Date lastDayOfWeek, String filePath) throws Exception {
 		Map<String, Spin> allSpins = new HashMap<>();
