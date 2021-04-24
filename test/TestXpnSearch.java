@@ -26,28 +26,25 @@ class TestXpnSearch {
 	}
 	
 	void addArtistInfoStoresArtistNameCorrectly() {
-		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
 		String artistName = "Nothing";
 		Map <String, ArtistInfo> artistInfos = new HashMap<>();
-		SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
+		//SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(artistName);
 		assertEquals(artistInfo.getArtistName(), "Nothing");
 	}
 	
 	void addArtistInfoStoresAlbumCorrectly() {
-		String artistInfoToStore = "Nothing <> The Great Dismal <> Relapse Records";
 		String artistName = "Nothing";
 		Map <String, ArtistInfo> artistInfos = new HashMap<>();
-		SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
+		//SpinSearch.addAlbumInfo(artistInfoToStore, false, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(artistName);
 		assertEquals(artistInfo.getAlbum(), "The Great Dismal");
 	}
 	
 	void addArtistInfoStoresSongsCorrectly() {
-		String artistInfoToStore = "Nothing <> Bernie Sanders + Say Less <> Relapse Records";
 		String artistName = "Nothing";
 		Map <String, ArtistInfo> artistInfos = new HashMap<>();
-		SpinSearch.addAlbumInfo(artistInfoToStore, true, "<>", artistInfos);
+		//SpinSearch.addAlbumInfo(artistInfoToStore, true, "<>", artistInfos);
 		ArtistInfo artistInfo = artistInfos.get(artistName);
 		String[] songs = {"Bernie Sanders" , "Say Less"};
 		assertEquals(artistInfo.getSongs(), songs);

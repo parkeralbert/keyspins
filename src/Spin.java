@@ -18,7 +18,7 @@ public class Spin {
 	}
 	
 	public String getArtist() {
-		return artist;
+		return artist;  
 	}
 	public void setArtist(String artist) {
 		this.artist = artist;
