@@ -105,7 +105,7 @@ abstract public class SpinSearch {
 	
 	public static void addArtistNames(String line, ArrayList<String> artistInfo) {
 		
-		if(line.trim().length() > 0 && !line.contains("Last Day of Week:") && !line.contains("Date:") && !line.contains("https://")) {
+		if(line.trim().length() > 0 && !line.contains("Last Day of Week:") && !line.contains("Date:") && !line.contains("https://") && (!line.equalsIgnoreCase("rolling") && !line.equalsIgnoreCase("published"))) {
 			if (line.indexOf("*") == 0) {
 				line = line.replace("*", "");
 			}

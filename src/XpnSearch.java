@@ -66,7 +66,7 @@ public class XpnSearch extends SpinSearch {
 						String[] showAndSpin = segments[0].split(" playlists ");
 						show = showAndSpin[0].substring(showAndSpin[0].indexOf("from the") + 9);
 						segments[0] = showAndSpin[1];
-						System.out.println("show is: " + show);
+						//System.out.println("show is: " + show);
 					}
 					else {
 					}
@@ -106,6 +106,7 @@ public class XpnSearch extends SpinSearch {
 	public void outputSpinsByArtist(String filePath, Map<String, ArrayList <String>> spinsByArtist, String allOutput) throws Exception {
 		for (String currentArtist : spinsByArtist.keySet()) {
 			writeSpinsToFile(currentArtist, spinsByArtist.get(currentArtist), filePath);
+			writeSpinsToFile(currentArtist, spinsByArtist.get(currentArtist), allOutput);
 		}
 	}
 	public void writeSpinsToFile(String currentArtist, ArrayList <String> rawSpins, String filePath) throws Exception {

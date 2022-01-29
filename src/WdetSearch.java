@@ -74,7 +74,7 @@ public class WdetSearch extends SpinSearch{
 				String[] tracks = list.getText().split("\"id\":");
 				for (int i = 0; i<tracks.length; i++) {
 					if (i == 0) {
-						System.out.println(tracks[i]);
+						//System.out.println(tracks[i]);
 						show = tracks[i].substring(tracks[i].indexOf("\"name\":") +8, tracks[i].indexOf("\",\"program_format"));
 						//System.out.println("show is: " + show);
 					}

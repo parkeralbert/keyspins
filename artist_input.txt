@@ -1,57 +1,46 @@
-Date: 03/31/21 12:00 AM EDT - 04/6/21 11:59 PM EDT
-Last Day of Week: Mar/03/2021
-https://wruw.org/playlist/chasing-infinity/2021-02-28
-https://wruw.org/playlist/sunny-day/2021-02-26
-https://api.composer.nprstations.org/v1/widget/5182d007e1c809685c190ee6/playlist?prog_id=5589cfa0e1cb399609f9b81e&format=json&after=2021-03-15
-https://api.composer.nprstations.org/v1/widget/5182d007e1c809685c190ee6/playlist?prog_id=5797ce6c324da47d5ebcd51b&format=json&after=2021-03-15
-https://tracklist-api.kcrw.com/Simulcast/search?q=artist&date=20210327&date_end=20210327
-https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=524ee7914ae01a2527000014&format=json&after=2021-03-15
-https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=522a0d2ca5b36ce245000c1b&format=json&after=2021-03-15
-https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=5544121e34fbfbec25fb4d57&format=json&after=2021-03-15
-https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=589e1432f3b245c557a7a85d&format=json&after=2021-03-15
-Allie Crow Buckley
-Amiture
-Another Michael
+Date: 01/19/22 12:00 AM EDT - 01/25/22 11:59 PM EDT
+Rolling
+https://wruw.org/playlist/chasing-infinity/2022-01-23
+https://wruw.org/playlist/sunny-day/2022-01-21
+https://api.composer.nprstations.org/v1/widget/5182d007e1c809685c190ee6/playlist?prog_id=5589cfa0e1cb399609f9b81e&format=json&after=2022-01-19
+https://api.composer.nprstations.org/v1/widget/5182d007e1c809685c190ee6/playlist?prog_id=5797ce6c324da47d5ebcd51b&format=json&after=2022-01-19
+https://tracklist-api.kcrw.com/Simulcast/search?q=artist&date=20220118&date_end=20220125
+https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=524ee7914ae01a2527000014&format=json&after=2022-01-19
+https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=522a0d2ca5b36ce245000c1b&format=json&after=2022-01-19
+https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=5544121e34fbfbec25fb4d57&format=json&after=2022-01-19
+https://api.composer.nprstations.org/v1/widget/51913027e1c8d7968915d8e0/playlist?prog_id=589e1432f3b245c557a7a85d&format=json&after=2022-01-19
+David Bowie
+A Place To Bury Strangers
+Alex Lahey
+Anxious
 Arlo Parks
-Badlands
-Becca Mancari
-Caro Juna
-Citizen
-Cloud Nothings
-Dameer
-Django Django
-For Those I Love
-Hypoluxo
-IAN SWEET
-Johnny Flynn
-Juan Wauters
-Katy Kirby
-Kero Kero Bonito
-Lael Neale
-Linda Smith
-Louisahhh
-Luminous Kid
-Lydia Ainsworth
-Mansell
-Michael Beach
-Middle Kids
-MJ Lenderman
-Molly Burch
-Moontype
-Mykki Blanco
-Nisa
-Orions Belte
-People Museum
-Reza Safinia
-Riley Moore
-Rinse
-Saint Sister
-Shannen James
-Soft Glas
-Sorry
-Spud Cannon
-Squid
-Vallens
-Velvet Vision
-Wallice
-Xiu Xiu
+Barrie
+Boris
+Camp Cope
+Caroline Loveglow
+Cat Power
+Chelsea Jade
+Cloakroom
+Cola
+EXES
+Hyd
+Julie Doiron
+Kelly Dance
+Let's Eat Grandma
+Matilde Davoli
+Methyl Ethel
+Mr Twin Sister
+Narrow Head
+Nocturnes
+Orion Sun
+Reptaliens
+Riki
+Sinead O'Brien
+Spaceface
+Sun June
+Test Subjects
+Uffie
+Why Not
+Widowspeak
+yarn
+yarn.

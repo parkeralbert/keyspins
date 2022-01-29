@@ -47,6 +47,7 @@ public class WfmuSearch extends SpinSearch {
 		
 		String queryName = currentArtist.replaceAll(" ", "+");	
 		queryName = queryName.replaceAll("&", "%26");
+		queryName = queryName.replaceAll("\\\\", "");
 		String sortUrl = "https://wfmu.org/search.php?action=searchbasic&sinputs=%5B%22or%22%2C%7B%22Artist%22%3A%22starts%22%2C%22Song+title%22%3A%22starts%22%2C%22Album+title%22%3A%22starts%22%2C%22Comments%22%3A%22starts%22%7D%2Cnull%2C%7B%22Artist%22%3A%22" + queryName + "%22%7D%2Cnull%2C347%2C5%2C%22" + queryName + "%22%2Cnull%2Cnull%5D&page=0&sort=Playlist%20links";
 		Document page = Jsoup.connect(sortUrl).userAgent(USER_AGENT).data(postData).post();
 		Elements rawData = page.select(String.format("tr:contains(%s)", currentArtist));

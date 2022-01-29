@@ -7,12 +7,12 @@ public class RunSearch {
 	
 	public static void main(String[] args) throws Exception
     {
-		//System.setProperty("webdriver.chrome.driver", "/opt/WebDriver/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/opt/WebDriver/bin/chromedriver");
 		
 		String inputPath = "artist_input.txt";
 		String outputPath = "data_key.txt";
 		String allOutput = "data_all.txt";
-		 String stationInput = "station_input.txt";
+		String stationInput = "station_input.txt";
 		XpnSearch xpn = new XpnSearch();
         WfmuSearch wfmu = new WfmuSearch();
         WmbrSearch wmbr = new WmbrSearch();
@@ -26,12 +26,11 @@ public class RunSearch {
         Date lastDayOfWeek = xpn.getLastDayOfWeek(inputPath);
         ArrayList <String> artistNames =  wmbr.getArtistList(inputPath);
         KcrwSearch newKcrw = new KcrwSearch();
+		/*BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath));
+		writer.newLine();
+		writer.close();*/
         if (args.length == 1 && args[0].equalsIgnoreCase("all")){
-			BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath));
-			writer.newLine();
-			writer.close();
     		System.out.println("This week is " + firstDayOfWeek + " - " + lastDayOfWeek);
-       
             wfmu.spinSearch("https://www.track-blaster.com/wmbr/", artistNames, firstDayOfWeek, lastDayOfWeek, outputPath, allOutput);
             xpn.spinSearch("https://xpn.org/playlists/playlist-search", artistNames, firstDayOfWeek, lastDayOfWeek, outputPath, allOutput);
             wmbr.spinSearch("https://www.track-blaster.com/wmbr/", artistNames, firstDayOfWeek, lastDayOfWeek, outputPath, allOutput);
@@ -40,6 +39,7 @@ public class RunSearch {
             wdet.spinSearch(artistNames, firstDayOfWeek, lastDayOfWeek, inputPath, outputPath, allOutput);
             wfuv.spinSearch(artistNames, firstDayOfWeek, lastDayOfWeek, inputPath, outputPath, allOutput);
             newKcrw.spinSearch(artistNames, firstDayOfWeek, lastDayOfWeek, outputPath, allOutput);
+            kexp.spinSearch(artistNames, firstDayOfWeek, lastDayOfWeek, outputPath, allOutput);
         }
         
 		if (args.length == 1 && args[0].equalsIgnoreCase("wxpn")){

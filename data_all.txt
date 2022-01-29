@@ -1,22 +1,353 @@
-Key|Cloud Nothings|The Shadow I Remember|Sound Of Alarm|WMBR|Cambridge|Breakfast of Champions|2021-03-31|-|-
-Key|Cloud Nothings|The Shadow I Remember|A Longer Moon|WMBR|Cambridge|James Dean Death Car Experience|2021-03-27|-|-
-Key|Louisahhh|-|No Pressure|KCRW|Los Angeles|Travis Holcombe|2021-03-30|01:31 AM|-
-Key|Velvet Vision|-|Springtime Buzz|KCRW|Los Angeles|Travis Holcombe|2021-03-31|11:20 PM|-
-Key|Louisahhh|-|No Pressure|KCRW|Los Angeles|Travis Holcombe|2021-04-02|12:54 AM|-
-Key|Velvet Vision|-|Springtime Buzz|KCRW|Los Angeles|Travis Holcombe|2021-03-31|11:20 PM|-
-Key|Django Django|-|Glowing In The Dark|KCRW|Los Angeles|Morning Becomes Eclectic|2021-04-02|02:30 PM|-
-Key|Django Django|-|Free From Gravity (Busy P Remix)|KCRW|Los Angeles|Travis Holcombe|2021-04-01|11:45 PM|-
-Key|Louisahhh|-|No Pressure|KCRW|Los Angeles|Travis Holcombe|2021-04-02|12:54 AM|-
-Key|Velvet Vision|-|Springtime Buzz|KCRW|Los Angeles|Travis Holcombe|2021-03-31|11:20 PM|-
-Key|Moontype|-|Stuck On You|KCRW|Los Angeles|Morning Becomes Eclectic|2021-04-05|12:51 PM|-
-Key|Orions Belte|-|Mouth|KCRW|Los Angeles|Travis Holcombe|2021-03-31|11:02 PM|-
-Key|MJ Lenderman|-|Genteleman's Jack|KCRW|Los Angeles|Morning Becomes Eclectic|2021-04-01|12:16 PM|-
-Key|Mykki Blanco|-|Free Ride|KCRW|Los Angeles|Morning Becomes Eclectic|2021-04-02|01:12 PM|-
-Key|Arlo Parks|-|Too Good|KCRW|Los Angeles|Valida|2021-04-04|11:34 PM|-
-Key|Arlo Parks|-|Too Good|KCRW|Los Angeles|Chris Douridas|2021-04-04|07:35 PM|-
-Key|Arlo Parks|-|Too Good|KCRW|Los Angeles|Morning Becomes Eclectic|2021-04-01|01:35 PM|-
-Key|Arlo Parks|-|Green Eyes|KCRW|Los Angeles|Travis Holcombe|2021-03-31|11:45 PM|-
-Key|Badlands|Djinn|Feel Like You|WMBR|Cambridge|Background Music|2021-04-05|-|-
-Key|Michael Beach|Dream Violence|De Facto Blues|WMBR|Cambridge|Aural Fixation|2021-04-03|-|-
-Key|Cloud Nothings|The Shadow I Remember|Sound Of Alarm|WMBR|Cambridge|Breakfast of Champions|2021-03-31|-|-
-Key|Xiu Xiu|Oh No|Sad Mezcalina [ft. Sharon Van Etten]|WMBR|Cambridge|Breakfast of Champions|2021-04-05|-|-
+Key|David Bowie|Hunky Dory (Remastered)|Life On Mars?|WFUV|New York|Cavalcade|2021-12-05|08:43|-
+Key|David Bowie|-|John, I’m Only Dancing (recorded live at the Music Hall, Boston 1/10/72)|KCRW|Los Angeles|Anne Litt|2021-12-12|04:35 PM|-
+Key|David Bowie|-|Helden|KCRW|Los Angeles|Henry Rollins|2021-12-11|01:01 AM|-
+Key|David Bowie|-|Right (alternative Gouster mix)|KCRW|Los Angeles|Morning Becomes Eclectic|2021-12-06|02:35 PM|-
+Key|David Bowie|-|Beauty and the Beast|KCRW|Los Angeles|Henry Rollins|2021-12-04|01:00 AM|-
+Key|David Bowie|-|Fame|KCRW|Los Angeles|Morning Becomes Eclectic|2021-11-29|12:29 PM|-
+Key|David Bowie|-|Wild Is the Wind|KCRW|Los Angeles|Henry Rollins|2021-11-27|02:54 AM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|Morning Becomes Eclectic|2021-12-13|12:36 PM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|Jason Kramer|2021-12-12|12:48 AM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|Dan Wilcox|2021-12-11|10:12 PM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|Raul Campos|2021-12-11|06:15 PM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|Morning Becomes Eclectic|2021-12-10|02:50 PM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|FREAKS ONLY|2021-12-09|11:22 PM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|FREAKS ONLY|2021-12-08|11:26 PM|-
+Key|Tame Impala|-|No Choice|KCRW|Los Angeles|Morning Becomes Eclectic|2021-12-08|12:42 PM|-
+Key|Tame Impala|-|The Less I Know the Better|KCRW|Los Angeles|Nassir Nassirzadeh|2021-11-28|03:58 AM|-
+Key|Tame Impala|-|Desire Be Desire Go|KCRW|Los Angeles|Dan Wilcox|2021-11-27|09:12 PM|-
+Key|The Beatles|-|While My Guitar Gently Weeps|KCRW|Los Angeles|Ro "Wyldeflower" Contreras|2021-12-01|03:33 AM|-
+Key|The Beatles|-|Two of Us|KCRW|Los Angeles|Chris Douridas|2021-11-28|03:23 PM|-
+Key|The Beatles|-|Happiness Is a Warm Gun|KCRW|Los Angeles|Ro "Wyldeflower" Contreras|2021-11-24|03:44 AM|-
+Key|Tame Impala|The Slow Rush B-Sides & Remixes|No Choice|WDET|Detroit|CultureShift|2021-12-07|12:41|-
+Key|David Bowie|Heathen|Cactus|WFMU|Jersey City|Serious Moonlight Sonatas with Carol|2021-12-12|-|-
+Key|David Bowie|Brilliant Adventure 1992-2001 (Box Set)|Seven Years In Tibet (edit)|WFMU|Jersey City|Dark Night of the Soul with Julie|2021-12-11|-|-
+Key|David Bowie|-|Starman (+1 other song)|WFMU|Jersey City|The Flange & Frigate with DJ GeorgyGirl|2021-12-10|-|-
+Key|David Bowie|Scary Monsters (and Super Creeps)|Ashes To Ashes|WFMU|Jersey City|Wake with Clay Pigeon|2021-12-09|-|-
+Key|David Bowie|Station To Station|Stay|WFMU|Jersey City|100% Whatever with Mary Wing|2021-12-08|-|-
+Key|David Bowie|The best of the BBC Sessions 1968-72|In The Heat Of The Morning|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-08|-|-
+Key|David Bowie|-|I'm Deranged (jungle mix)|WFMU|Jersey City|Frame Duggy Louder with Jan Turkenburg|2021-12-06|-|-
+Key|David Bowie|David Bowie|Janine|WFMU|Jersey City|Wake with Clay Pigeon|2021-12-01|-|-
+Key|David Bowie|-|And I Say To Myself|WFMU|Jersey City|Big Planet Noise with Bob Irwin and Gina Bacon|2021-11-29|-|-
+Key|David Bowie|Young Americans|Right|WFMU|Jersey City|Radio Row|2021-11-28|-|-
+Key|David Bowie|Rock Reflections|The Laughing Gnome|WFMU|Jersey City|The Funhouse with Harry Parmenter|2021-11-28|-|-
+Key|David Bowie|Pin Ups|Everything's Alright|WFMU|Jersey City|Hinky Dinky Time with Uncle Michael|2021-11-26|-|-
+Key|Queen|Jazz|Leaving Home Ain't Easy|WFMU|Jersey City|Dark Night of the Soul with Julie|2021-12-11|-|-
+Key|The Beatles|-|The Bus|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-13|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-12|-|-
+Key|The Beatles|-|The Bus|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-12|-|-
+Key|The Beatles|-|Milk Cow Blues|WFMU|Jersey City|Bad Animals with Amanda and Jim the Poet|2021-12-11|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-11|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-11|-|-
+Key|The Beatles|-|The Bus|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-10|-|-
+Key|The Beatles|-|I Feel Fine|WFMU|Jersey City|Discotech Underground with Kip Brown|2021-12-09|-|-
+Key|The Beatles|-|Within Tomorrow (Ursula 1000 Cheeky Boot)|WFMU|Jersey City|Sounds Spectacular with Ursula1000|2021-12-09|-|-
+Key|The Beatles|-|Flying (+1 other song)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-09|-|-
+Key|The Beatles|Meet The Beatles!|This Boy|WFMU|Jersey City|Denny's Den with Dennis Diken|2021-12-08|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-08|-|-
+Key|The Beatles|-|Flying (+1 other song)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-08|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Soul Lunch with Soul'n'Soul Bunny|2021-12-07|-|-
+Key|The Beatles|Revolver|She Said, She Said|WFMU|Jersey City|Big Planet Noise with Bob Irwin and Gina Bacon|2021-12-06|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-06|-|-
+Key|The Beatles|-|Flying (+2 other songs)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-06|-|-
+Key|The Beatles|The Beatles (The White Album)|Dear Prudence|WFMU|Jersey City|Wake with Clay Pigeon|2021-12-06|-|-
+Key|The Beatles|-|Mean Mr Mustard (+1 other song)|WFMU|Jersey City|Bubblegum OD with Becky Ebenkamp|2021-12-05|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-05|-|-
+Key|The Beatles|-|The Bus|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-05|-|-
+Key|The Beatles|-|The Bus (+3 other songs)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-04|-|-
+Key|The Beatles|prev. unr|Morning Camera / Two Of Us (Take 4)|WFMU|Jersey City|Hinky Dinky Time with Uncle Michael|2021-12-03|-|-
+Key|The Beatles|-|One After 909 (1969 Glyn Johns mix)|WFMU|Jersey City|Music To Spazz By with Dave the Spazz|2021-12-02|-|-
+Key|The Beatles|-|Savoy Truffle|WFMU|Jersey City|Sounds Spectacular with Ursula1000|2021-12-02|-|-
+Key|The Beatles|Let It Be [Super Deluxe]|For You Blue (Take 4)|WFMU|Jersey City|Denny's Den with Dennis Diken|2021-12-01|-|-
+Key|The Beatles|-|Flying (+3 other songs)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-12-01|-|-
+Key|The Beatles|Live at the Hollywood Bowl|Boys|WFMU|Jersey City|Kick Out The Jams with Joey D|2021-11-30|-|-
+Key|The Beatles|Magical Mystery Tour|Flying|WFMU|Jersey City|Wake with Clay Pigeon|2021-11-30|-|-
+Key|The Beatles|Beatles For Sale|I Don't Want To Spoil the Party|WFMU|Jersey City|Big Planet Noise with Bob Irwin and Gina Bacon|2021-11-29|-|-
+Key|The Beatles|Let It Be... Naked|Don't Let Me Down (+1 other song)|WFMU|Jersey City|Irene Trudel's show|2021-11-29|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-11-29|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-11-29|-|-
+Key|The Beatles|out take|I Will (Take 29)|WFMU|Jersey City|Atlantic Tunnel with Ed & Gaz|2021-11-28|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-11-28|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-11-27|-|-
+Key|The Beatles|-|Only a Northern Song (+1 other song)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-11-27|-|-
+Key|The Beatles|Let It Be (Super Deluxe)|Get Back (2021 Mix) (+26 other songs)|WFMU|Jersey City|The Flange & Frigate with DJ GeorgyGirl|2021-11-26|-|-
+Key|The Beatles|-|The Bus (+2 other songs)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-11-26|-|-
+Key|The Beatles|Let It Be (Super Deluxe)|I've Got A Feeling (2021 Mix)|WFMU|Jersey City|Wake with Clay Pigeon|2021-11-26|-|-
+Key|The Beatles|-|I'll Cry Instead|WFMU|Jersey City|Music To Spazz By with Dave the Spazz|2021-11-25|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-11-25|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Soul Lunch with Soul'n'Soul Bunny|2021-11-25|-|-
+Key|The Beatles|-|Flying (+1 other song)|WFMU|Jersey City|The Night Owl Show with Owl Sun|2021-11-25|-|-
+Key|The Beatles|-|Flying|WFMU|Jersey City|Rock'n'Soul Radio|2021-11-24|-|-
+Key|The Beatles|-|Taxman|WFMU|Jersey City|The Mike Rogers Show|2021-11-24|-|-
+Key|David Bowie|Hunky Dory (Remastered)|Life On Mars?|WFUV|New York|Cavalcade|2021-12-05|08:43|-
+Key|David Bowie|The Rise and Fall of Ziggy Stardust and the Spiders from Mars|It Ain't Easy|WMBR|Cambridge|Lost and Found|2021-12-13|-|-
+Key|David Bowie|The Rise and Fall of Ziggy Stardust and the Spiders from Mars|Hang On To Yourself|WMBR|Cambridge|88 Rewound|2021-12-04|-|-
+Key|David Bowie|Hunky Dory|Andy Warhol [excerpt]|WMBR|Cambridge|Mindblown|2021-12-03|-|-
+Key|David Bowie|Bowie At The Beeb: The Best Of The BBC Radio Sessions '68-'72|Andy Warhol|WMBR|Cambridge|Mindblown|2021-12-03|-|-
+Key|David Bowie|Hunky Dory|Quicksand|WMBR|Cambridge|The Pontoon Palace|2021-12-02|-|-
+Key|The Beatles|Past Masters|She's a Woman|WMBR|Cambridge|88 Rewound|2021-12-11|-|-
+Key|The Beatles|Past Masters|I Feel Fine|WMBR|Cambridge|88 Rewound|2021-12-11|-|-
+Key|The Beatles||You Know My Name (Look Up My Number)|WMBR|Cambridge|Troubadour|2021-12-09|-|-
+Key|The Beatles|Let It Roll: The Best of George Harrison|Isn't it a Pity|WMBR|Cambridge|In The Margin Of The Other|2021-12-08|-|-
+Key|The Beatles|Help! / Help! (Original Motion Picture Soundtrack)|I Need You|WMBR|Cambridge|Lost and Found|2021-12-07|-|-
+Key|The Beatles|A Hard Day's Night / The Beatles' Second Album|You Can't Do That|WMBR|Cambridge|Lost and Found|2021-12-07|-|-
+Key|The Beatles||Get Back|WMBR|Cambridge|Troubadour|2021-12-02|-|-
+Key|The Beatles||She Came in through the Bathroom Window|WMBR|Cambridge|Troubadour|2021-12-02|-|-
+Key|The Beatles|Abbey Road (Remastered)|Because - Remastered 2009|WMBR|Cambridge|Breakfast of Champions|2021-12-01|-|-
+Key|The Beatles|Rubber Soul (UK) / Yesterday and Today (US)|Drive My Car|WMBR|Cambridge|Lost and Found|2021-11-30|-|-
+Key|The Beatles|1|All You Need Is Love [Remastered]|WMBR|Cambridge|The SurreaList|2021-11-29|-|-
+Key|The Beatles|Rubber Soul|What Goes On|WMBR|Cambridge|Lost and Found|2021-11-26|-|-
+Key|The Beatles|Rubber Soul (Remastered)|In My Life|WMBR|Cambridge|Lentil and Stone|2021-11-24|-|-
+Key|David Bowie|Toy 12-09-2021 14:53 pm David Bowie|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-12-13|08:53 AM|-
+Key|David Bowie|Toy|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-12-13|08:53 AM|-
+Key|David Bowie|The Rise And Fall Of Ziggy Stardust And The Spiders From Mars|Ziggy Stardust--Suffragette City|WXPN|Philadelphia|Regular Programming|2021-12-09|02:53 PM|-
+Key|David Bowie|The Rise And Fall Of Ziggy Stardust And The Spiders From Mars|Moonage Daydream|WXPN|Philadelphia|Regular Programming|2021-12-09|02:48 PM|-
+Key|David Bowie|The Rise And Fall Of Ziggy Stardust And The Spiders From Mars|Five Years|WXPN|Philadelphia|Regular Programming|2021-12-09|02:44 PM|-
+Key|David Bowie|Hunky Dory|Changes|WXPN|Philadelphia|Regular Programming|2021-12-08|07:01 PM|-
+Key|David Bowie|Station To Station|Golden Years|WXPN|Philadelphia|Regular Programming|2021-12-08|11:22 AM|-
+Key|David Bowie|Aladdin Sane|The Jean Genie|WXPN|Philadelphia|Regular Programming|2021-12-07|07:46 PM|-
+Key|David Bowie|Low|Sound And Vision|WXPN|Philadelphia|Regular Programming|2021-12-07|06:49 PM|-
+Key|David Bowie|David Live|Diamond Dogs|WXPN|Philadelphia|Regular Programming|2021-12-07|06:41 PM|-
+Key|David Bowie|Scary Monsters|Ashes To Ashes|WXPN|Philadelphia|Regular Programming|2021-12-07|05:05 PM|-
+Key|David Bowie|Let's Dance|Let's Dance|WXPN|Philadelphia|Regular Programming|2021-12-07|09:13 AM|-
+Key|David Bowie|Diamond Dogs|Rebel Rebel|WXPN|Philadelphia|Regular Programming|2021-12-06|07:02 PM|-
+Key|David Bowie|Heroes|Heroes|WXPN|Philadelphia|Regular Programming|2021-12-05|07:30 PM|-
+Key|David Bowie|Changesonebowie|John, I'm Only Dancing|WXPN|Philadelphia|Regular Programming|2021-12-05|03:30 AM|-
+Key|David Bowie|?|I Can't Give Everything Away|WXPN|Philadelphia|Regular Programming|2021-12-03|08:17 PM|-
+Key|David Bowie|David Bowie|Space Oddity|WXPN|Philadelphia|Regular Programming|2021-12-03|12:11 AM|-
+Key|David Bowie|Heathen|Slow Burn|WXPN|Philadelphia|Regular Programming|2021-12-02|07:01 PM|-
+Key|David Bowie|The Man Who Sold The World|The Man Who Sold The World|WXPN|Philadelphia|Regular Programming|2021-12-02|12:35 PM|-
+Key|David Bowie|Young Americans|Can You Hear Me|WXPN|Philadelphia|Regular Programming|2021-12-01|06:52 PM|-
+Key|David Bowie|Toy|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-12-01|03:38 AM|-
+Key|David Bowie|Toy|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-11-30|05:41 AM|-
+Key|David Bowie|Toy|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-11-29|04:04 PM|-
+Key|David Bowie|Toy|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-11-29|01:45 AM|-
+Key|David Bowie|Station To Station|Stay|WXPN|Philadelphia|Regular Programming|2021-11-27|11:30 AM|-
+Key|David Bowie|Toy|You've Got A Habit Of Leaving|WXPN|Philadelphia|Regular Programming|2021-11-26|08:35 AM|-
+Key|David Bowie|Hunky Dory|Changes|WXPN|Philadelphia|Regular Programming|2021-11-25|06:33 PM|-
+Key|David Bowie|Hunky Dory 06-06-2021 08:52 am David Bowie|Eight Line Poem|WXPN|Philadelphia|Sleepy Hollow|2021-12-12|07:47 AM|-
+Key|David Bowie|Hunky Dory|Eight Line Poem|WXPN|Philadelphia|Sleepy Hollow|2021-12-12|07:47 AM|-
+Key|Tame Impala|Currents 12-05-2021 13:41 pm Tame Impala|Let it Happen|WXPN|Philadelphia|Regular Programming|2021-12-07|02:25 PM|-
+Key|Tame Impala|Currents|Let it Happen|WXPN|Philadelphia|Regular Programming|2021-12-07|02:25 PM|-
+Key|Tame Impala|Lonerism|Feels Like We Only Go Backwards|WXPN|Philadelphia|Regular Programming|2021-12-05|01:41 PM|-
+Key|Tame Impala|Innerspeaker|Solitude Is Bliss|WXPN|Philadelphia|Regular Programming|2021-12-04|11:31 AM|-
+Key|Tame Impala|The Slow Rush|Lost In Yesterday|WXPN|Philadelphia|Regular Programming|2021-12-03|02:02 PM|-
+Key|Tame Impala|The Slow Rush|Tomorrow's Dust|WXPN|Philadelphia|Regular Programming|2021-11-30|09:31 PM|-
+Key|Tame Impala|Currents|Let it Happen|WXPN|Philadelphia|Regular Programming|2021-11-26|08:51 AM|-
+Key|Queen|A Night At The Opera|You're My Best Friend|WXPN|Philadelphia|Regular Programming|2021-12-08|10:56 PM|-
+Key|Queen|A Night At The Opera|Bohemian Rhapsody|WXPN|Philadelphia|Regular Programming|2021-12-08|10:50 PM|-
+Key|Queen|Sheer Heart Attack|Killer Queen|WXPN|Philadelphia|Regular Programming|2021-12-07|12:30 PM|-
+Key|Queen|News Of The World|We Will Rock You / We Are The Champions|WXPN|Philadelphia|Regular Programming|2021-12-06|08:24 PM|-
+Key|Queen|Jazz|Bicycle Race|WXPN|Philadelphia|Regular Programming|2021-12-06|11:13 AM|-
+Key|Queen|Queen II|Funny How Love Is|WXPN|Philadelphia|Regular Programming|2021-12-05|02:28 PM|-
+Key|Queen|The Game|Need Your Loving Tonight|WXPN|Philadelphia|Regular Programming|2021-12-04|05:17 AM|-
+Key|Queen|A Day At The Races|Somebody To Love|WXPN|Philadelphia|Regular Programming|2021-12-02|11:40 PM|-
+Key|Queen|Queen 40|You Take My Breath Away|WXPN|Philadelphia|Sleepy Hollow|2021-11-28|07:38 AM|-
+Key|The Beatles|Abbey Road 12-10-2021 17:35 pm The Beatles|Her Majesty|WXPN|Philadelphia|Regular Programming|2021-12-10|05:51 PM|-
+Key|The Beatles|Abbey Road|Her Majesty|WXPN|Philadelphia|Regular Programming|2021-12-10|05:51 PM|-
+Key|The Beatles|Abbey Road|Abbey Road Medley|WXPN|Philadelphia|Regular Programming|2021-12-10|05:35 PM|-
+Key|The Beatles|Abbey Road|Because|WXPN|Philadelphia|Regular Programming|2021-12-10|05:33 PM|-
+Key|The Beatles|Abbey Road|Here Comes The Sun|WXPN|Philadelphia|Regular Programming|2021-12-10|05:30 PM|-
+Key|The Beatles|Abbey Road|I Want You (She's So Heavy)|WXPN|Philadelphia|Regular Programming|2021-12-10|05:22 PM|-
+Key|The Beatles|Abbey Road|Octopus's Garden|WXPN|Philadelphia|Regular Programming|2021-12-10|05:19 PM|-
+Key|The Beatles|Abbey Road|Oh! Darling|WXPN|Philadelphia|Regular Programming|2021-12-10|05:16 PM|-
+Key|The Beatles|Abbey Road|Maxwell's Silver Hammer|WXPN|Philadelphia|Regular Programming|2021-12-10|05:12 PM|-
+Key|The Beatles|Abbey Road|Something|WXPN|Philadelphia|Regular Programming|2021-12-10|05:09 PM|-
+Key|The Beatles|Abbey Road|Come Together|WXPN|Philadelphia|Regular Programming|2021-12-10|05:05 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|A Day In The Life|WXPN|Philadelphia|Regular Programming|2021-12-10|03:20 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Sgt. Pepper's Lonely Hearts Club Band (Reprise)|WXPN|Philadelphia|Regular Programming|2021-12-10|03:19 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Good Morning Good Morning|WXPN|Philadelphia|Regular Programming|2021-12-10|03:16 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Lovely Rita|WXPN|Philadelphia|Regular Programming|2021-12-10|03:13 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|When I'm Sixty-Four|WXPN|Philadelphia|Regular Programming|2021-12-10|03:11 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Within You Without You|WXPN|Philadelphia|Regular Programming|2021-12-10|03:06 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Being For The Benefit Of Mr. Kite!|WXPN|Philadelphia|Regular Programming|2021-12-10|03:01 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|She's Leaving Home|WXPN|Philadelphia|Regular Programming|2021-12-10|02:57 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Fixing A Hole|WXPN|Philadelphia|Regular Programming|2021-12-10|02:55 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Getting Better|WXPN|Philadelphia|Regular Programming|2021-12-10|02:52 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Lucy In The Sky With Diamonds|WXPN|Philadelphia|Regular Programming|2021-12-10|02:49 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|With A Little Help From My Friends|WXPN|Philadelphia|Regular Programming|2021-12-10|02:46 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|Sgt. Pepper's Lonely Heart's Club Band|WXPN|Philadelphia|Regular Programming|2021-12-10|02:44 PM|-
+Key|The Beatles|Revolver|Tomorrow Never Knows|WXPN|Philadelphia|Regular Programming|2021-12-09|03:57 PM|-
+Key|The Beatles|Revolver|Good Day Sunshine|WXPN|Philadelphia|Regular Programming|2021-12-09|03:55 PM|-
+Key|The Beatles|Revolver|She Said She Said|WXPN|Philadelphia|Regular Programming|2021-12-09|03:52 PM|-
+Key|The Beatles|Revolver|Eleanor Rigby|WXPN|Philadelphia|Regular Programming|2021-12-09|03:50 PM|-
+Key|The Beatles|Rubber Soul|Drive My Car|WXPN|Philadelphia|Regular Programming|2021-12-09|11:56 AM|-
+Key|The Beatles|Rubber Soul|In My Life|WXPN|Philadelphia|Regular Programming|2021-12-09|11:54 AM|-
+Key|The Beatles|Rubber Soul|Girl|WXPN|Philadelphia|Regular Programming|2021-12-09|11:51 AM|-
+Key|The Beatles|Rubber Soul|Norwegian Wood (This Bird Has Flown)|WXPN|Philadelphia|Regular Programming|2021-12-09|11:49 AM|-
+Key|The Beatles|Meet The Beatles|All My Loving|WXPN|Philadelphia|Regular Programming|2021-12-09|10:41 AM|-
+Key|The Beatles|Meet The Beatles|It Won't Be Long|WXPN|Philadelphia|Regular Programming|2021-12-09|10:39 AM|-
+Key|The Beatles|Meet The Beatles|I Saw Her Standing There|WXPN|Philadelphia|Regular Programming|2021-12-09|10:36 AM|-
+Key|The Beatles|The Beatles|Helter Skelter|WXPN|Philadelphia|Regular Programming|2021-12-09|06:47 AM|-
+Key|The Beatles|The Beatles|Everybody's Got Something To Hide Except Me and My Monkey|WXPN|Philadelphia|Regular Programming|2021-12-09|06:45 AM|-
+Key|The Beatles|The Beatles|Blackbird|WXPN|Philadelphia|Regular Programming|2021-12-09|06:42 AM|-
+Key|The Beatles|Let It Be|Let It Be|WXPN|Philadelphia|Regular Programming|2021-12-09|04:56 AM|-
+Key|The Beatles|Let It Be|Across The Universe|WXPN|Philadelphia|Regular Programming|2021-12-09|04:53 AM|-
+Key|The Beatles|Let It Be|Get Back|WXPN|Philadelphia|Regular Programming|2021-12-09|04:50 AM|-
+Key|The Beatles|A Hard Day's Night|A Hard Day's Night|WXPN|Philadelphia|Regular Programming|2021-12-08|05:09 AM|-
+Key|The Beatles|Magical Mystery Tour|Strawberry Fields Forever|WXPN|Philadelphia|Regular Programming|2021-12-08|04:12 AM|-
+Key|The Beatles|Help!|Yesterday|WXPN|Philadelphia|Regular Programming|2021-12-07|02:06 PM|-
+Key|The Beatles|Introducing The Beatles|Misery|WXPN|Philadelphia|Regular Programming|2021-12-05|02:33 PM|-
+Key|The Beatles|Beatles 65|No Reply|WXPN|Philadelphia|Regular Programming|2021-12-05|11:54 AM|-
+Key|The Beatles|Yesterday & Today|What Goes On|WXPN|Philadelphia|Regular Programming|2021-12-03|06:06 AM|-
+Key|The Beatles|Please Please Me|Love Me Do|WXPN|Philadelphia|Regular Programming|2021-12-02|10:05 AM|-
+Key|The Beatles|Abbey Road|Come Together|WXPN|Philadelphia|Regular Programming|2021-12-01|12:56 PM|-
+Key|The Beatles|Sgt. Pepper's Lonely Hearts Club Band|A Day In The Life|WXPN|Philadelphia|Regular Programming|2021-12-01|12:51 PM|-
+Key|The Beatles|The Beatles|Dear Prudence|WXPN|Philadelphia|Regular Programming|2021-12-01|12:29 PM|-
+Key|The Beatles|Revolver|Got To Get You Into My Life|WXPN|Philadelphia|Regular Programming|2021-12-01|12:18 PM|-
+Key|The Beatles|Rubber Soul|You Won't See Me|WXPN|Philadelphia|Regular Programming|2021-12-01|12:15 PM|-
+Key|The Beatles|Magical Mystery Tour|Blue Jay Way|WXPN|Philadelphia|Regular Programming|2021-11-30|04:56 AM|-
+Key|The Beatles|Revolver|Taxman|WXPN|Philadelphia|Regular Programming|2021-11-28|12:25 PM|-
+Key|The Beatles|The Beatles|While My Guitar Gently Weeps|WXPN|Philadelphia|Regular Programming|2021-11-26|10:38 AM|-
+Key|The Beatles|The Beatles|Everybody's Got Something To Hide Except Me and My Monkey|WXPN|Philadelphia|Regular Programming|2021-11-26|10:36 AM|-
+Key|The Beatles|With The Beatles|All My Loving|WXPN|Philadelphia|Regular Programming|2021-11-26|10:34 AM|-
+Key|The Beatles|With The Beatles|You Really Got A Hold On Me|WXPN|Philadelphia|Regular Programming|2021-11-26|10:31 AM|-
+Key|The Beatles|Let It Be|I Me Mine|WXPN|Philadelphia|Regular Programming|2021-11-25|04:47 AM|-
+Key|The Beatles|The Beatles|I'm So Tired|WXPN|Philadelphia|Regular Programming|2021-11-25|03:02 AM|-
+RadioBox|David Bowie|-|You've Got A Habit Of Leaving|wxpn|-|-|12-13|08:54 AM|-
+RadioBox|David Bowie|-|Eight Line Poem|wxpn|-|-|12-12|07:47 AM|-
+RadioBox|David Bowie|-|Ziggy Stardust--Suffragette City|wxpn|-|-|12-09|02:53 PM|-
+RadioBox|David Bowie|-|Moonage Daydream|wxpn|-|-|12-09|02:49 PM|-
+RadioBox|David Bowie|-|Five Years|wxpn|-|-|12-09|02:44 PM|-
+RadioBox|David Bowie|-|Changes|wxpn|-|-|12-08|07:01 PM|-
+RadioBox|David Bowie|-|Golden Years|wxpn|-|-|12-08|11:22 AM|-
+RadioBox|David Bowie|-|The Jean Genie|wxpn|-|-|12-07|07:47 PM|-
+RadioBox|David Bowie|-|Sound And Vision|wxpn|-|-|12-07|06:49 PM|-
+RadioBox|David Bowie|-|Diamond Dogs|wxpn|-|-|12-07|06:42 PM|-
+RadioBox|David Bowie|-|Ashes To Ashes|wxpn|-|-|12-07|05:06 PM|-
+RadioBox|David Bowie|-|Let's Dance|wxpn|-|-|12-07|09:14 AM|-
+RadioBox|David Bowie|-|Rebel Rebel|wxpn|-|-|12-13|07:03 PM|-
+RadioBox|David Bowie|-|Heroes|wxpn|-|-|12-12|07:31 PM|-
+RadioBox|David Bowie|-|John, I'm Only Dancing|wxpn|-|-|12-12|03:31 AM|-
+RadioBox|Tame Impala|-|Let it Happen|wxpn|-|-|12-07|02:25 PM|-
+RadioBox|Tame Impala|-|Feels Like We Only Go Backwards|wxpn|-|-|12-12|01:42 PM|-
+RadioBox|Queen|-|You're My Best Friend|wxpn|-|-|12-08|10:56 PM|-
+RadioBox|Queen|-|Bohemian Rhapsody|wxpn|-|-|12-08|10:50 PM|-
+RadioBox|Queen|-|Killer Queen|wxpn|-|-|12-07|12:31 PM|-
+RadioBox|Queen|-|We Will Rock You / We Are The Champions|wxpn|-|-|12-13|08:25 PM|-
+RadioBox|Queen|-|Bicycle Race|wxpn|-|-|12-13|11:14 AM|-
+RadioBox|Queen|-|Funny How Love Is|wxpn|-|-|12-12|02:29 PM|-
+RadioBox|Spoon|-|The Hardest Cut|wxpn|-|-|12-13|09:01 AM|-
+RadioBox|Spoon|-|The Hardest Cut|wxpn|-|-|12-13|02:23 AM|-
+RadioBox|Spoon|-|The Two Sides Of Monsieur Valentine|wxpn|-|-|12-12|12:42 PM|-
+RadioBox|Spoon|-|The Beast And Dragon, Adored|wxpn|-|-|12-12|12:38 PM|-
+RadioBox|Spoon|-|I Turn My Camera On|wxpn|-|-|12-12|12:34 PM|-
+RadioBox|Spoon|-|The Hardest Cut|wxpn|-|-|12-11|11:32 AM|-
+RadioBox|Spoon|-|Everything Hits At Once|wxpn|-|-|12-10|08:54 AM|-
+RadioBox|Spoon|-|The Underdog|wxpn|-|-|12-07|10:01 AM|-
+RadioBox|Spoon|-|Sister Jack|wxpn|-|-|12-12|07:55 PM|-
+RadioBox|The Beatles|-|Her Majesty|wxpn|-|-|12-10|05:52 PM|-
+RadioBox|The Beatles|-|Abbey Road Medley|wxpn|-|-|12-10|05:36 PM|-
+RadioBox|The Beatles|-|Because|wxpn|-|-|12-10|05:33 PM|-
+RadioBox|The Beatles|-|Here Comes The Sun|wxpn|-|-|12-10|05:30 PM|-
+RadioBox|The Beatles|-|I Want You (She's So Heavy)|wxpn|-|-|12-10|05:22 PM|-
+RadioBox|The Beatles|-|Octopus's Garden|wxpn|-|-|12-10|05:20 PM|-
+RadioBox|The Beatles|-|Oh! Darling|wxpn|-|-|12-10|05:16 PM|-
+RadioBox|The Beatles|-|Maxwell's Silver Hammer|wxpn|-|-|12-10|05:13 PM|-
+RadioBox|The Beatles|-|Something|wxpn|-|-|12-10|05:10 PM|-
+RadioBox|The Beatles|-|Come Together|wxpn|-|-|12-10|05:06 PM|-
+RadioBox|The Beatles|-|A Day In The Life|wxpn|-|-|12-10|03:21 PM|-
+RadioBox|The Beatles|-|Sgt. Pepper's Lonely Hearts Club Band (Reprise)|wxpn|-|-|12-10|03:19 PM|-
+RadioBox|The Beatles|-|Good Morning Good Morning|wxpn|-|-|12-10|03:17 PM|-
+RadioBox|The Beatles|-|Lovely Rita|wxpn|-|-|12-10|03:14 PM|-
+RadioBox|The Beatles|-|When I'm Sixty-Four|wxpn|-|-|12-10|03:11 PM|-
+RadioBox|The Beatles|-|Within You Without You|wxpn|-|-|12-10|03:06 PM|-
+RadioBox|The Beatles|-|Being For The Benefit Of Mr. Kite!|wxpn|-|-|12-10|03:02 PM|-
+RadioBox|The Beatles|-|She's Leaving Home|wxpn|-|-|12-10|02:58 PM|-
+RadioBox|The Beatles|-|Fixing A Hole|wxpn|-|-|12-10|02:55 PM|-
+RadioBox|The Beatles|-|Getting Better|wxpn|-|-|12-10|02:53 PM|-
+RadioBox|The Beatles|-|Lucy In The Sky With Diamonds|wxpn|-|-|12-10|02:49 PM|-
+RadioBox|The Beatles|-|With A Little Help From My Friends|wxpn|-|-|12-10|02:47 PM|-
+RadioBox|The Beatles|-|Sgt. Pepper's Lonely Heart's Club Band|wxpn|-|-|12-10|02:45 PM|-
+RadioBox|The Beatles|-|Tomorrow Never Knows|wxpn|-|-|12-09|03:58 PM|-
+RadioBox|The Beatles|-|Good Day Sunshine|wxpn|-|-|12-09|03:56 PM|-
+RadioBox|The Beatles|-|She Said She Said|wxpn|-|-|12-09|03:53 PM|-
+RadioBox|The Beatles|-|Eleanor Rigby|wxpn|-|-|12-09|03:51 PM|-
+RadioBox|The Beatles|-|Drive My Car|wxpn|-|-|12-09|11:57 AM|-
+RadioBox|The Beatles|-|In My Life|wxpn|-|-|12-09|11:54 AM|-
+RadioBox|The Beatles|-|Girl|wxpn|-|-|12-09|11:52 AM|-
+RadioBox|The Beatles|-|Norwegian Wood (This Bird Has Flown)|wxpn|-|-|12-09|11:50 AM|-
+RadioBox|The Beatles|-|All My Loving|wxpn|-|-|12-09|10:42 AM|-
+RadioBox|The Beatles|-|It Won't Be Long|wxpn|-|-|12-09|10:40 AM|-
+RadioBox|The Beatles|-|I Saw Her Standing There|wxpn|-|-|12-09|10:37 AM|-
+RadioBox|The Beatles|-|Helter Skelter|wxpn|-|-|12-09|06:48 AM|-
+RadioBox|The Beatles|-|Everybody's Got Something To Hide Except Me and My Monkey|wxpn|-|-|12-09|06:45 AM|-
+RadioBox|The Beatles|-|Blackbird|wxpn|-|-|12-09|06:43 AM|-
+RadioBox|The Beatles|-|Let It Be|wxpn|-|-|12-09|04:57 AM|-
+RadioBox|The Beatles|-|Across The Universe|wxpn|-|-|12-09|04:53 AM|-
+RadioBox|The Beatles|-|Get Back|wxpn|-|-|12-09|04:51 AM|-
+RadioBox|The Beatles|-|A Hard Day's Night|wxpn|-|-|12-08|05:09 AM|-
+RadioBox|The Beatles|-|Strawberry Fields Forever|wxpn|-|-|12-08|04:12 AM|-
+RadioBox|The Beatles|-|Yesterday|wxpn|-|-|12-07|02:06 PM|-
+RadioBox|The Beatles|-|Misery|wxpn|-|-|12-12|02:33 PM|-
+RadioBox|The Beatles|-|No Reply|wxpn|-|-|12-12|11:54 AM|-
+Key|David Bowie|-|Let's Dance|KEXP|Seattle|Marco Collins|2021-11-24|05:53 PM|-
+Key|David Bowie|-|Let's Dance|KEXP|Seattle|Eva Walker|2021-11-25|10:55 AM|-
+Key|David Bowie|-|Love Is Lost (Hello Steve Reich...|KEXP|Seattle|Evie|2021-11-26|09:47 AM|-
+Key|David Bowie|-|Starman|KEXP|Seattle|John Richards|2021-12-01|07:11 AM|-
+Key|David Bowie|-|I’m Afraid of Americans (Nine I...|KEXP|Seattle|John Richards|2021-12-03|08:32 AM|-
+Key|David Bowie|-|Lazarus|KEXP|Seattle|Greta Rose|2021-12-04|05:28 AM|-
+Key|David Bowie|-|Fame|KEXP|Seattle|John Richards|2021-12-08|08:08 AM|-
+Key|David Bowie|-|Life On Mars?|KEXP|Seattle|John Richards|2021-12-10|09:02 AM|-
+Key|Tame Impala|-|Breathe Deeper (Lil Yachty Remix)|KEXP|Seattle|Marco Collins|2021-11-26|06:38 PM|-
+Key|Tame Impala|-|Apocalypse Dreams|KEXP|Seattle|John Richards|2021-11-30|09:53 AM|-
+Key|Tame Impala|-|Lost in Yesterday|KEXP|Seattle|Greta Rose|2021-12-02|11:00 PM|-
+Key|Tame Impala|-|Lost in Yesterday|KEXP|Seattle|Cheryl Waters|2021-12-07|11:28 AM|-
+Key|Tame Impala|-|No Choice|KEXP|Seattle|Marco Collins|2021-12-09|09:20 PM|-
+Key|Queen|-|Another One Bites the Dust|KEXP|Seattle|Marco Collins|2021-11-25|04:50 PM|-
+Key|Queen|-|You're My Best Friend|KEXP|Seattle|Marco Collins|2021-11-30|05:09 PM|-
+Key|Queen|-|Somebody To Love|KEXP|Seattle|John Richards|2021-12-01|07:01 AM|-
+Key|Queen|-|Don’t Stop Me Now|KEXP|Seattle|DJ Miss Ashley|2021-12-01|01:01 PM|-
+Key|Queen|-|Flash's Theme|KEXP|Seattle|Reeves|2021-12-05|02:34 AM|-
+Key|Spoon|-|The Two Sides Of Monsieur Valen...|KEXP|Seattle|Cheryl Waters|2021-11-24|10:23 AM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Cheryl Waters|2021-11-24|10:20 AM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Abbie|2021-11-27|04:01 PM|-
+Key|Spoon|-|Trouble Comes Running|KEXP|Seattle|John Richards|2021-11-30|08:18 AM|-
+Key|Spoon|-|The Underdog|KEXP|Seattle|Marco Collins|2021-12-01|05:22 PM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Larry Mizell, Jr.|2021-12-03|03:07 PM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Troy Nelson|2021-12-04|05:45 PM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Reeves|2021-12-05|04:18 AM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Troy Nelson|2021-12-06|05:56 PM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|John Richards|2021-12-08|08:37 AM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Kevin Cole|2021-12-08|06:27 PM|-
+Key|Spoon|-|The Hardest Cut|KEXP|Seattle|Troy Nelson|2021-12-11|04:27 PM|-
+Key|SZA|-|Prom|KEXP|Seattle|Abbie|2021-11-28|05:28 PM|-
+Key|The Beatles|-|Without A Song (Jam) – Billy Pr...|KEXP|Seattle|Hans|2021-11-24|10:44 PM|-
+Key|The Beatles|-|Can't Buy Me Love|KEXP|Seattle|Lisa LeClair|2021-11-26|03:08 AM|-
+Key|The Beatles|-|Blue Jay Way|KEXP|Seattle|Marco Collins|2021-11-26|05:31 PM|-
+Key|The Beatles|-|Get Back|KEXP|Seattle|John Richards|2021-11-29|07:03 AM|-
+Key|The Beatles|-|I've Got A Feeling|KEXP|Seattle|John Richards|2021-11-29|09:33 AM|-
+Key|The Beatles|-|Get Back (2021 mix)|KEXP|Seattle|John Richards|2021-11-30|09:50 AM|-
+Key|The Beatles|-|Yesterday|KEXP|Seattle|Larry Mizell, Jr.|2021-11-30|03:32 PM|-
+Key|The Beatles|-|Let It Be|KEXP|Seattle|John Richards|2021-12-01|08:56 AM|-
+Key|The Beatles|-|Get Back|KEXP|Seattle|John Richards|2021-12-01|09:05 AM|-
+Key|The Beatles|-|Paul Writing Get Back|KEXP|Seattle|John Richards|2021-12-01|09:05 AM|-
+Key|The Beatles|-|Lucy In The Sky With Diamonds|KEXP|Seattle|Marco Collins|2021-12-02|06:34 PM|-
+Key|The Beatles|-|Get Back|KEXP|Seattle|Michele Myers|2021-12-03|08:16 PM|-
+Key|The Beatles|-|Within You Without You/Tomorrow...|KEXP|Seattle|Troy Nelson|2021-12-04|03:02 PM|-
+Key|The Beatles|-|A Day In The Life|KEXP|Seattle|John Richards|2021-12-08|07:02 AM|-
+Key|The Beatles|-|Dig A Pony|KEXP|Seattle|John Richards|2021-12-08|08:12 AM|-
+Key|The Beatles|-|Tomorrow Never Knows|KEXP|Seattle|John Richards|2021-12-08|09:50 AM|-
+Key|The Beatles|-|Lucy In The Sky With Diamonds|KEXP|Seattle|Eva Walker|2021-12-08|11:23 AM|-
+Key|David Bowie|-|Do Anything You Say|WFMU|Jersey City|Big Planet Noise with Bob Irwin and Gina Bacon|2021-12-13|-|-
+Key|David Bowie|Heathen|Cactus|WFMU|Jersey City|Serious Moonlight Sonatas with Carol|2021-12-12|-|-
+Key|David Bowie|Brilliant Adventure 1992-2001 (Box Set)|Seven Years In Tibet (edit)|WFMU|Jersey City|Dark Night of the Soul with Julie|2021-12-11|-|-
+Key|David Bowie|-|Starman (+1 other song)|WFMU|Jersey City|The Flange & Frigate with DJ GeorgyGirl|2021-12-10|-|-
+Key|David Bowie|Scary Monsters (and Super Creeps)|Ashes To Ashes|WFMU|Jersey City|Wake with Clay Pigeon|2021-12-09|-|-
+Key|David Bowie|Station To Station|Stay|WFMU|Jersey City|100% Whatever with Mary Wing|2021-12-08|-|-
+Key|David Bowie|The best of the BBC Sessions 1968-72|In The Heat Of The Morning|WFMU|Jersey City|Rock'n'Soul Radio|2021-12-08|-|-
+Key|David Bowie|-|I'm Deranged (jungle mix)|WFMU|Jersey City|Frame Duggy Louder with Jan Turkenburg|2021-12-06|-|-
+Key|David Bowie|David Bowie|Janine|WFMU|Jersey City|Wake with Clay Pigeon|2021-12-01|-|-
+Key|David Bowie|-|And I Say To Myself|WFMU|Jersey City|Big Planet Noise with Bob Irwin and Gina Bacon|2021-11-29|-|-
+Key|David Bowie|Young Americans|Right|WFMU|Jersey City|Radio Row|2021-11-28|-|-
+Key|David Bowie|Rock Reflections|The Laughing Gnome|WFMU|Jersey City|The Funhouse with Harry Parmenter|2021-11-28|-|-
+Key|David Bowie|Pin Ups|Everything's Alright|WFMU|Jersey City|Hinky Dinky Time with Uncle Michael|2021-11-26|-|-
+Key|Queen|Jazz|Leaving Home Ain't Easy|WFMU|Jersey City|Dark Night of the Soul with Julie|2021-12-11|-|-
+Key|David Bowie|Re:Call 4|Loving The Alien (Re-Mixed Version)|WFMU|Jersey City|Dark Night of the Soul with Julie|2022-01-25|-|-
+Key|David Bowie|-|Heart's Filthy Lesson (Trent Reznor Mix)|WFMU|Jersey City|The Perplexiterium with Doctor Sarcofiguy|2022-01-25|-|-
+Key|David Bowie|Bowie At The Beeb|Memory of a Free Festival (live on BBC)|WFMU|Jersey City|Dark Night of the Soul with Julie|2022-01-24|-|-
+Key|David Bowie|The best of the BBC Sessions 1968-72|In The Heat Of The Morning|WFMU|Jersey City|Rock'n'Soul Radio|2022-01-23|-|-
+Key|David Bowie|The best of the BBC Sessions 1968-72|In The Heat Of The Morning|WFMU|Jersey City|Rock'n'Soul Radio|2022-01-22|-|-
+Key|David Bowie|-|Changes (+3 other songs)|WFMU|Jersey City|The Flange & Frigate with DJ GeorgyGirl|2022-01-21|-|-
+Key|David Bowie|Pin Ups|See Emily Play|WFMU|Jersey City|Wake with Clay Pigeon|2022-01-21|-|-
+Key|David Bowie|Toy (Toy:Box)|Toy (Your Turn To Drive)|WFUV|New York|Cavalcade|2022-01-23|06:01|-
+Key|David Bowie|Toy (Toy:Box)|Toy (Your Turn To Drive)|WFUV|New York|Cavalcade|2022-01-23|06:01|-
