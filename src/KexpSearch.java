@@ -40,34 +40,53 @@ public class KexpSearch extends SpinSearch{
 	
 	public ArrayList <String> formatUrls(Date firstDayOfWeek, Date lastDayOfWeek) throws Exception{
 		ArrayList <String> dateList = new ArrayList<>();
-		SimpleDateFormat dateToString = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat dateToString = new SimpleDateFormat("MMMMM'&day='d'&year='yyyy");
 		String date = null;	
+		System.out.println("first date is:" + dateToString.format(firstDayOfWeek));
+		System.out.println("last date is:" + dateToString.format(lastDayOfWeek));
+		String lastDate = dateToString.format(lastDayOfWeek);
 		Calendar c = Calendar.getInstance();
 		c.setTime(firstDayOfWeek);
 		Date currentDate = c.getTime();
-		int hourCount = 0;
+		int hourCount = 1;
+		boolean pm = false;
 		
-		while (isDateInRange(firstDayOfWeek, lastDayOfWeek, currentDate)) {
+		while (isDateInRange(firstDayOfWeek, lastDayOfWeek, currentDate) || date.equals(lastDate)) {
 			date = dateToString.format(c.getTime()); 
+			System.out.println("currentdate is " + date);
 			String hour=String.valueOf(hourCount); 
-			if (hourCount <10 ) {
-				dateList.add(date + "/" + "0" + hour );
+
+			if (pm) {
+				dateList.add(date + "&hour=" + hour + "%3A00&ampm=PM");
+				System.out.println("date is: " + date + "&hour=" + hour + "%3A00&ampm=PM");
 			}
 			else {
-				dateList.add(date + "/" + hour);
+				dateList.add(date + "&hour=" + hour + "%3A00&ampm=AM");
+				System.out.println("date is: " + date + "&hour=" + hour + "%3A00&ampm=AM");
 			}
+
+
 			
-			if(hourCount == 23) {
-				hourCount = 0;
+			if(hourCount == 11 && pm == false) {
+				hourCount = 1;
+				pm = true;
+			}
+			else if(hourCount == 11 && pm == true) {
+				hourCount = 1;
 				c.add(Calendar.DATE, 1);  
+				pm = false;
 			}
 			else {
 				hourCount++;
 			}
 			currentDate = c.getTime();
+			date = dateToString.format(c.getTime()); 
 		}
+		System.out.println("last date is: " + dateToString.format(c.getTime()));
 		return dateList;
 	}
+	//https://www.kexp.org/playlist/?month=October&day=20&year=2023&hour=1%3A00&ampm=AM&offset=0
+	
 	
 	
 	public	ArrayList <String[]> getSpinData(ArrayList <String> artistNames, ArrayList <String> urls) throws Exception {
@@ -81,7 +100,7 @@ public class KexpSearch extends SpinSearch{
 		try {
 		for (String url : urls) {
 		try {
-			String completeUrl = "http://www.kexplorer.com/playlist/" + url;
+			String completeUrl = "https://www.kexp.org/playlist/?month=" + url + "&offset=0";
 			driver.get(completeUrl);
 			WebDriverWait wait = new WebDriverWait(driver, 1000);
 			Thread.sleep(2000);
