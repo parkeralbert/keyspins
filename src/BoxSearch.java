@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -46,7 +47,7 @@ public class BoxSearch extends SpinSearch{
 				ArrayList <String[]> spinData = new ArrayList<>();
 				for (String url : allUrls.get(station)) {
 					driver.get(url);
-					WebDriverWait wait = new WebDriverWait(driver, 1000);
+					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 					wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class = 'ajax']")));
 					List <WebElement> spins= driver.findElements(By.tagName("tr"));
 					WebElement dateTab= driver.findElement(By.xpath("//li[@class = 'active']//child::span[1]"));

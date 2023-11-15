@@ -457,3 +457,69 @@ Key|David Bowie|-|Changes (+3 other songs)|WFMU|Jersey City|The Flange & Frigate
 Key|David Bowie|Pin Ups|See Emily Play|WFMU|Jersey City|Wake with Clay Pigeon|2022-01-21|-|-
 Key|David Bowie|Toy (Toy:Box)|Toy (Your Turn To Drive)|WFUV|New York|Cavalcade|2022-01-23|06:01|-
 Key|David Bowie|Toy (Toy:Box)|Toy (Your Turn To Drive)|WFUV|New York|Cavalcade|2022-01-23|06:01|-
+Key|Cloakroom|Dissolution Wave|A Force at Play|KEXP|Seattle|THE MORNING SHOW with JOHN RICHARDS|2022-01-18|03:39 PM
+Key|Widowspeak|The Jacket|Everything Is Simple|KEXP|Seattle|THE MORNING SHOW with JOHN RICHARDS|2022-01-20|10:32 AM
+Key|Riki|Gold|Marigold|KEXP|Seattle|VARIETY MIX with KENNADY QUILLE|2022-01-25|05:09 AM
+Key|Julie Doiron|I Thought Of You|Thought of You|KEXP|Seattle|VARIETY MIX with KENNADY QUILLE|2022-01-19|04:38 AM
+Key|Julie Doiron|I Thought Of You|How Can We|KEXP|Seattle|THE MIDDAY SHOW with CHERYL WATERS|2022-01-19|03:26 PM
+Key|Boris|W|Icelina|KEXP|Seattle|VARIETY MIX with SEAN|2022-01-25|03:29 AM
+Key|David Bowie|The Man Who Sold the World|She Shook Me Cold|KEXP|Seattle|SONIC REDUCER with DR. WEST|2022-01-23|02:28 AM
+Key|David Bowie|Station to Station|Golden Years|KEXP|Seattle|VARIETY MIX with REEVES|2022-01-23|06:33 AM
+Key|David Bowie|Diamond Dogs|Diamond Dogs|KEXP|Seattle|THE MIDDAY SHOW with CHERYL WATERS|2022-01-24|01:14 PM
+Key|Camp Cope|Running With the Hurricane|Running with the Hurricane|KEXP|Seattle|THE MIDDAY SHOW with CHERYL WATERS|2022-01-20|02:34 PM
+Key|Camp Cope|Running With the Hurricane|Running with the Hurricane|KEXP|Seattle|VARIETY MIX with KENNADY QUILLE|2022-01-21|06:25 AM
+Key|Camp Cope|Running With the Hurricane|Running with the Hurricane|KEXP|Seattle|VARIETY MIX with REEVES|2022-01-23|08:23 AM
+Key|Camp Cope|Running With the Hurricane|Running with the Hurricane|KEXP|Seattle|THE MIDDAY SHOW with CHERYL WATERS|2022-01-24|02:07 PM
+Key|Camp Cope|Running with the Hurricane|Running with the Hurricane|KEXP|Seattle|DRIVE TIME with KEVIN COLE|2022-01-25|08:12 PM
+Key|Reptaliens|Multiverse|Like A Dog|KEXP|Seattle|VARIETY MIX with KENNADY QUILLE|2022-01-25|05:38 AM
+Key|Mr Twin Sister|Al Mundo Azul|Youth Obsessed|KEXP|Seattle|VARIETY MIX with TROY NELSON|2022-01-22|06:11 PM
+Key|Mr Twin Sister|Al Mundo Azul|Fantasy|KEXP|Seattle|VARIETY MIX with DJ MISS ASHLEY|2022-01-23|04:32 PM
+Key|Mr Twin Sister|Al Mundo Azul|Polvo|KEXP|Seattle|DRIVE TIME with KEVIN COLE|2022-01-25|08:58 PM
+Key|Anxious|Little Green House|Growing Up Song|KEXP|Seattle|DRIVE TIME with KEVIN COLE|2022-01-18|08:37 PM
+Key|Anxious|Little Green House|More Than A Letter|KEXP|Seattle|DRIVE TIME with KEVIN COLE|2022-01-21|08:58 PM
+Key|Anxious|Little Green House|In April|KEXP|Seattle|VARIETY MIX with REEVES|2022-01-23|07:47 AM
+Key|A Place to Bury Strangers|See Through You|Let's See Each Other|KEXP|Seattle|VARIETY MIX with KENNADY QUILLE|2022-01-21|06:38 AM
+Key|Arlo Parks|Collapsed In Sunbeams|Hope|KEXP|Seattle|DRIVE TIME with KEVIN COLE|2022-01-25|09:35 PM
+Key|Cat Power|Covers|White Mustang|KEXP|Seattle|VARIETY MIX with SEAN|2022-01-18|02:07 AM
+Key|Cat Power|Wanderer|Robbin Hood|KEXP|Seattle|VARIETY MIX with LISA LECLAIR|2022-01-18|06:15 AM
+Key|Cat Power|Covers|Pa Pa Power|KEXP|Seattle|VARIETY MIX with LARRY ROSE|2022-01-19|02:24 AM
+Key|Cat Power|Covers|Bad Religion|KEXP|Seattle|EARLY with GABRIEL TEODROS|2022-01-19|07:39 AM
+Key|Cat Power|Covers|Here Comes a Regular|KEXP|Seattle|THE MORNING SHOW with JOHN RICHARDS|2022-01-19|10:01 AM
+Key|Cat Power|Covers|Here Comes a Regular|KEXP|Seattle|VARIETY MIX with HANS|2022-01-20|01:27 AM
+Key|Cat Power|album|Cat Power|KEXP|Seattle|POSITIVE VIBRATIONS with KID HOPS|2022-01-22|11:41 AM
+Key|Cat Power|Covers|Pa Pa Power|KEXP|Seattle|VARIETY MIX with REEVES|2022-01-23|06:51 AM
+Key|Cat Power|Covers|Bad Religion|KEXP|Seattle|VARIETY MIX with EVIE|2022-01-23|08:41 PM
+Key|Cloakroom|JOHN RICHARDS|KEXP|Seattle|2022-01-18|2022-01-18
+Key|Widowspeak|JOHN RICHARDS|KEXP|Seattle|2022-01-20|2022-01-20
+Key|Riki|KENNADY QUILLE|KEXP|Seattle|2022-01-25|2022-01-25
+Key|Julie Doiron|KENNADY QUILLE|KEXP|Seattle|2022-01-19|2022-01-19
+Key|Julie Doiron|CHERYL WATERS|KEXP|Seattle|2022-01-19|2022-01-19
+Key|Boris|SEAN|KEXP|Seattle|2022-01-25|2022-01-25
+Key|David Bowie|DR. WEST|KEXP|Seattle|2022-01-23|2022-01-23
+Key|David Bowie|REEVES|KEXP|Seattle|2022-01-23|2022-01-23
+Key|David Bowie|CHERYL WATERS|KEXP|Seattle|2022-01-24|2022-01-24
+Key|Camp Cope|CHERYL WATERS|KEXP|Seattle|2022-01-20|2022-01-20
+Key|Camp Cope|KENNADY QUILLE|KEXP|Seattle|2022-01-21|2022-01-21
+Key|Camp Cope|REEVES|KEXP|Seattle|2022-01-23|2022-01-23
+Key|Camp Cope|CHERYL WATERS|KEXP|Seattle|2022-01-24|2022-01-24
+Key|Camp Cope|KEVIN COLE|KEXP|Seattle|2022-01-24|2022-01-24
+Key|Camp Cope|KEVIN COLE|KEXP|Seattle|2022-01-25|2022-01-25
+Key|Reptaliens|KENNADY QUILLE|KEXP|Seattle|2022-01-25|2022-01-25
+Key|Mr Twin Sister|TROY NELSON|KEXP|Seattle|2022-01-22|2022-01-22
+Key|Mr Twin Sister|DJ MISS ASHLEY|KEXP|Seattle|2022-01-23|2022-01-23
+Key|Mr Twin Sister|LARRY MIZELL, JR.|KEXP|Seattle|2022-01-24|2022-01-24
+Key|Mr Twin Sister|KEVIN COLE|KEXP|Seattle|2022-01-25|2022-01-25
+Key|Anxious|KEVIN COLE|KEXP|Seattle|2022-01-18|2022-01-18
+Key|Anxious|KEVIN COLE|KEXP|Seattle|2022-01-21|2022-01-21
+Key|Anxious|REEVES|KEXP|Seattle|2022-01-23|2022-01-23
+Key|A Place to Bury Strangers|KENNADY QUILLE|KEXP|Seattle|2022-01-21|2022-01-21
+Key|Arlo Parks|KEVIN COLE|KEXP|Seattle|2022-01-25|2022-01-25
+Key|Cat Power|SEAN|KEXP|Seattle|2022-01-18|2022-01-18
+Key|Cat Power|LISA LECLAIR|KEXP|Seattle|2022-01-18|2022-01-18
+Key|Cat Power|LARRY ROSE|KEXP|Seattle|2022-01-19|2022-01-19
+Key|Cat Power|GABRIEL TEODROS|KEXP|Seattle|2022-01-19|2022-01-19
+Key|Cat Power|JOHN RICHARDS|KEXP|Seattle|2022-01-19|2022-01-19
+Key|Cat Power|HANS|KEXP|Seattle|2022-01-20|2022-01-20
+Key|Cat Power|GRETA ROSE|KEXP|Seattle|2022-01-22|2022-01-22
+Key|Cat Power|KID HOPS|KEXP|Seattle|2022-01-22|2022-01-22
+Key|Cat Power|REEVES|KEXP|Seattle|2022-01-23|2022-01-23

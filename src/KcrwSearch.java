@@ -1,6 +1,7 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -62,7 +63,7 @@ public class KcrwSearch extends SpinSearch {
 		ArrayList <String[]> spinData = new ArrayList<>();
 		try {
 		for (String url : urls) {
-			WebDriverWait wait = new WebDriverWait(driver, 1000);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			driver.get(url);
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class = 'song-title'] | //p[contains(text(), 'Tracklist information is not available.')]")));
 			List <WebElement> message = driver.findElements(By.xpath("//p[contains(text(), 'We have run out of songs to show you. Please select a different Show or date above.')]"));

@@ -1,6 +1,7 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -41,7 +42,7 @@ public class KexpSearch extends SpinSearch{
 	public ArrayList <String> formatUrls(Date firstDayOfWeek, Date lastDayOfWeek) throws Exception{
 		ArrayList <String> dateList = new ArrayList<>();
 		SimpleDateFormat dateToString = new SimpleDateFormat("MMMMM'&day='d'&year='yyyy");
-		String date = null;	
+		String date = null;				
 		System.out.println("first date is:" + dateToString.format(firstDayOfWeek));
 		System.out.println("last date is:" + dateToString.format(lastDayOfWeek));
 		String lastDate = dateToString.format(lastDayOfWeek);
@@ -93,47 +94,61 @@ public class KexpSearch extends SpinSearch{
 		WebDriver driver = new ChromeDriver();
 		String artist = null;
 		String song = null;
-		String dj = null;
 		String date = null;
+		SimpleDateFormat formatter = new SimpleDateFormat("MMMMM'&day='d'&year='yyyy'&hour='h'%3A00&ampm='a");
+		SimpleDateFormat dateToString = new SimpleDateFormat("yyyy-MM-dd");
 
 		ArrayList <String[]> spinData = new ArrayList<>();
 		try {
 		for (String url : urls) {
+			System.out.println("url is:" + url);
+			Date spinDate = formatter.parse(url);
 		try {
 			String completeUrl = "https://www.kexp.org/playlist/?month=" + url + "&offset=0";
 			driver.get(completeUrl);
-			WebDriverWait wait = new WebDriverWait(driver, 1000);
-			Thread.sleep(2000);
-			driver.findElement(By.id("plist"));	
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3600));
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='MediaObject-body']")));
+			//Thread.sleep(2000);
+			driver.findElement(By.id("playlist-plays"));	
 		}
 		
-		catch(org.openqa.selenium.NoSuchElementException e){
-			System.out.println("Missed data at url: " + url);
+		catch(org.openqa.selenium.TimeoutException e){
+			System.out.println("Check for spins at url https://www.kexp.org/playlist/?month=" + url + "&offset=0");
 			continue;		
 		}
 
 
-				WebElement table = driver.findElement(By.id("plist"));	
-				WebElement tbody = table.findElements(By.xpath("./child::*")).get(0);
-				List <WebElement> trs = tbody.findElements(By.xpath("./child::*"));
+				WebElement table = driver.findElement(By.id("playlist-plays"));	
+				WebElement showTable = driver.findElement(By.id("show-detail"));	
+				WebElement djTable = showTable.findElements(By.xpath("./child::*")).get(1);
+				WebElement djName = djTable.findElements(By.xpath("./child::*")).get(1);
+				String djData = djName.getText().trim();
+				String [] nameAndShow =	djName.getText().split("\n");
+				String show = nameAndShow[0];
+				String dj = nameAndShow[1];
+				
+				List <WebElement> trs = table.findElements(By.xpath("./child::*"));
 				
 				for (WebElement tr : trs) {
-					if (tr == trs.get(0)) {
+					String clsVal = tr.getAttribute("class");
+					if (!clsVal.equalsIgnoreCase("PlaylistItem u-mb1")) {
 						continue;
 					}
-					WebElement artistTd = tr.findElements(By.xpath("./child::*")).get(1);
-					WebElement spinDiv = artistTd.findElements(By.xpath("./child::*")).get(0);
-					WebElement detailsDiv = spinDiv.findElements(By.xpath("./child::*")).get(1);
-					WebElement artistHref = detailsDiv.findElements(By.xpath("./child::*")).get(2);
+					WebElement td = tr.findElements(By.xpath("./child::*")).get(2);
+					
+					WebElement timeTable = tr.findElements(By.xpath("./child::*")).get(1);
+					String time = timeTable.findElements(By.xpath("./child::*")).get(0).getText();
+					WebElement songTitle = td.findElements(By.xpath("./child::*")).get(0);
+					if (songTitle.getText().equalsIgnoreCase("Air Break")) {
+						continue;
+					}
+					WebElement artistsName = td.findElements(By.xpath("./child::*")).get(1);
+					WebElement albumTitle = td.findElements(By.xpath("./child::*")).get(2);
+
 					
 					for (String artistName : artistNames) {
-						if (artistHref.getText().equalsIgnoreCase(artistName)) {
-							WebElement dateAndDj = tr.findElements(By.xpath("./child::*")).get(0);
-							WebElement songHref = detailsDiv.findElements(By.xpath("./child::*")).get(0);
-							String dateDj = dateAndDj.getText().replaceAll("[\\n]", "");
-							String[] segments = dateDj.split("DJ:");
-							
-							String [] spin = {artistHref.getText(), songHref.getText(), segments[0].trim(), segments[1].trim()};
+						if (artistsName.getText().equalsIgnoreCase(artistName)) {
+							String [] spin = {artistsName.getText(), songTitle.getText(), dj, dateToString.format(spinDate)};
 							System.out.println("KEXP spin: " + "|" + spin[0] + "|" + spin[1] + "|" + spin[2] + "|" + spin[3]);
 							spinData.add(spin);
 						}
@@ -157,34 +172,28 @@ public class KexpSearch extends SpinSearch{
 	public void addSpin(ArrayList <String[]> spinData, String currentArtist, Map<String, ArrayList <String>> allSpinData, Date firstDayOfWeek, Date lastDayOfWeek) throws Exception   {
 		ArrayList <String> spins = new ArrayList<>();
 		String date = "";
-		Date spinDate = null;
 		String artist = "-";
 		String song = "-";
 		String host = "-";
 		String spinToAdd;
 		boolean alreadyAdded;
-		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yy hh:mm a");
 		
 		for (String[] spin : spinData) {
 			alreadyAdded = false;
 			if (spin[0].equalsIgnoreCase(currentArtist)) {
-				spinDate = formatter.parse(spin[2]);
-				SimpleDateFormat dateToString = new SimpleDateFormat("yyyy-MM-dd|hh:mm a");
-				date = dateToString.format(spinDate);
 				artist = spin[0];
-				song = spin[1];
+				String album = spin[1];
+				song = spin[2];
 				host = spin[3];
-				if (isDateInRange(firstDayOfWeek, lastDayOfWeek, spinDate)) {
-					spinToAdd = "Key" + "|" + artist + "|" + "-" + "|" + song + "|" + "KEXP" + "|" + "Seattle" + "|" + host + "|" + date + "|" + "-";
-					for (String addedSpin: spins) {
-						if (addedSpin.equalsIgnoreCase(spinToAdd)) {
-							alreadyAdded = true;
-							break;
-						}
+				spinToAdd = "Key" + "|" + artist + "|" + song + "|" + "KEXP" + "|" + "Seattle" + "|" + host + "|" + spin[3];
+				for (String addedSpin: spins) {
+					if (addedSpin.equalsIgnoreCase(spinToAdd)) {
+						alreadyAdded = true;
+						break;
 					}
-					if (!alreadyAdded) {
-						spins.add(spinToAdd);
-					}
+				}
+				if (!alreadyAdded) {
+					spins.add(spinToAdd);
 				}
 			}
 
