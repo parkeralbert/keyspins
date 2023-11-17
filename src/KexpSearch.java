@@ -100,6 +100,20 @@ public class KexpSearch extends SpinSearch{
 
 		ArrayList <String[]> spinData = new ArrayList<>();
 		try {
+			driver.get("https://www.kexp.org/schedule/");
+			Thread.sleep(2000);
+			WebElement programHeader = driver.findElement(By.xpath("//div[@class='u-postitionRelative']"));
+			programHeader.findElements(By.xpath("./child::*")).get(2).click();
+			Thread.sleep(2000);
+			WebElement leftSide = driver.findElement(By.xpath("//div[@class='ScheduleList-left']"));
+			WebElement leftColumn = leftSide.findElements(By.xpath("./child::*")).get(0);
+			List <WebElement> leftItems = leftColumn.findElements(By.xpath("./child::*"));
+			
+			for (WebElement timeSlot : leftItems) {
+				List <WebElement> showItems = timeSlot.findElements(By.xpath("./child::*"));
+				System.out.println("timeslot is " + showItems.get(0).getText());
+				System.out.println("dj is " + showItems.get(1).findElements(By.xpath("./child::*")).get(1).getText());
+			}
 		for (String url : urls) {
 			System.out.println("url is:" + url);
 			Date spinDate = formatter.parse(url);
@@ -117,7 +131,7 @@ public class KexpSearch extends SpinSearch{
 			continue;		
 		}
 
-
+		//u-postitionRelative
 				WebElement table = driver.findElement(By.id("playlist-plays"));	
 				WebElement showTable = driver.findElement(By.id("show-detail"));	
 				WebElement djTable = showTable.findElements(By.xpath("./child::*")).get(1);
