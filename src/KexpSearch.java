@@ -43,8 +43,8 @@ public class KexpSearch extends SpinSearch{
 		ArrayList <String> dateList = new ArrayList<>();
 		SimpleDateFormat dateToString = new SimpleDateFormat("MMMMM'&day='d'&year='yyyy");
 		String date = null;				
-		System.out.println("first date is:" + dateToString.format(firstDayOfWeek));
-		System.out.println("last date is:" + dateToString.format(lastDayOfWeek));
+		//System.out.println("first date is:" + dateToString.format(firstDayOfWeek));
+		//System.out.println("last date is:" + dateToString.format(lastDayOfWeek));
 		String lastDate = dateToString.format(lastDayOfWeek);
 		Calendar c = Calendar.getInstance();
 		c.setTime(firstDayOfWeek);
@@ -54,7 +54,7 @@ public class KexpSearch extends SpinSearch{
 		
 		while (isDateInRange(firstDayOfWeek, lastDayOfWeek, currentDate) || date.equals(lastDate)) {
 			date = dateToString.format(c.getTime()); 
-			System.out.println("currentdate is " + date);
+			//System.out.println("currentdate is " + date);
 			String hour=String.valueOf(hourCount); 
 
 			if (pm) {
@@ -83,7 +83,7 @@ public class KexpSearch extends SpinSearch{
 			currentDate = c.getTime();
 			date = dateToString.format(c.getTime()); 
 		}
-		System.out.println("last date is: " + dateToString.format(c.getTime()));
+		//System.out.println("last date is: " + dateToString.format(c.getTime()));
 		return dateList;
 	}
 	//https://www.kexp.org/playlist/?month=October&day=20&year=2023&hour=1%3A00&ampm=AM&offset=0
@@ -100,35 +100,42 @@ public class KexpSearch extends SpinSearch{
 
 		ArrayList <String[]> spinData = new ArrayList<>();
 		try {
-			driver.get("https://www.kexp.org/schedule/");
-			Thread.sleep(2000);
-			WebElement programHeader = driver.findElement(By.xpath("//div[@class='u-postitionRelative']"));
-			programHeader.findElements(By.xpath("./child::*")).get(2).click();
-			Thread.sleep(2000);
-			WebElement leftSide = driver.findElement(By.xpath("//div[@class='ScheduleList-left']"));
-			WebElement leftColumn = leftSide.findElements(By.xpath("./child::*")).get(0);
-			List <WebElement> leftItems = leftColumn.findElements(By.xpath("./child::*"));
-			
-			for (WebElement timeSlot : leftItems) {
-				List <WebElement> showItems = timeSlot.findElements(By.xpath("./child::*"));
-				System.out.println("timeslot is " + showItems.get(0).getText());
-				System.out.println("dj is " + showItems.get(1).findElements(By.xpath("./child::*")).get(1).getText());
-			}
 		for (String url : urls) {
 			System.out.println("url is:" + url);
 			Date spinDate = formatter.parse(url);
 		try {
 			String completeUrl = "https://www.kexp.org/playlist/?month=" + url + "&offset=0";
 			driver.get(completeUrl);
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3600));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+			Thread.sleep(1000);
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='MediaObject-body']")));
-			//Thread.sleep(2000);
 			driver.findElement(By.id("playlist-plays"));	
 		}
 		
 		catch(org.openqa.selenium.TimeoutException e){
-			System.out.println("Check for spins at url https://www.kexp.org/playlist/?month=" + url + "&offset=0");
-			continue;		
+			try{
+				String completeUrl = "https://www.kexp.org/playlist/?month=" + url + "&offset=0";
+				driver.get(completeUrl);
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+				Thread.sleep(1000);
+				wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='MediaObject-body']")));
+				driver.findElement(By.id("playlist-plays"));	
+			}
+			catch(org.openqa.selenium.TimeoutException f){
+				try {
+					String completeUrl = "https://www.kexp.org/playlist/?month=" + url + "&offset=0";
+					driver.get(completeUrl);
+					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+					Thread.sleep(1000);
+					wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='MediaObject-body']")));
+					driver.findElement(By.id("playlist-plays"));
+				}
+				catch(org.openqa.selenium.TimeoutException g){
+					//System.out.println("Check for spins at url https://www.kexp.org/playlist/?month=" + url + "&offset=0");	
+					continue;
+				}
+
+			}
 		}
 
 		//u-postitionRelative
@@ -197,8 +204,8 @@ public class KexpSearch extends SpinSearch{
 			if (spin[0].equalsIgnoreCase(currentArtist)) {
 				artist = spin[0];
 				String album = spin[1];
-				song = spin[2];
-				host = spin[3];
+				song = spin[1];
+				host = spin[2];
 				spinToAdd = "Key" + "|" + artist + "|" + song + "|" + "KEXP" + "|" + "Seattle" + "|" + host + "|" + spin[3];
 				for (String addedSpin: spins) {
 					if (addedSpin.equalsIgnoreCase(spinToAdd)) {
@@ -238,8 +245,8 @@ public class KexpSearch extends SpinSearch{
 	}
 	
 	public void writeSpinsToFile(String currentArtist, ArrayList <String> rawSpins, String filePath) throws Exception {
-		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
 			if(rawSpins.size() > 0) {
+				BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
 				for (String rawSpin : rawSpins) {
 					writer.write(rawSpin);
 					writer.newLine();
