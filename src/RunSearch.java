@@ -7,7 +7,7 @@ public class RunSearch {
 	
 	public static void main(String[] args) throws Exception
     {
-		System.setProperty("webdriver.chrome.driver", "/opt/WebDriver/bin/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "/opt/WebDriver/bin/chromedriver");
 		
 		String inputPath = "artist_input.txt";
 		String outputPath = "data_key.txt";
