@@ -68,13 +68,13 @@ public class KexpSearch extends SpinSearch{
 
 
 			
-			if(hourCount == 11 && pm == false) {
-				hourCount = 1;
-				pm = true;
-			}
-			else if(hourCount == 11 && pm == true) {
+			if(hourCount == 12 && pm == false) {
 				hourCount = 1;
 				c.add(Calendar.DATE, 1);  
+				pm = true;
+			}
+			else if(hourCount == 12 && pm == true) {
+				hourCount = 1;
 				pm = false;
 			}
 			else {
@@ -163,6 +163,12 @@ public class KexpSearch extends SpinSearch{
 					if (songTitle.getText().equalsIgnoreCase("Air Break")) {
 						continue;
 					}
+					try {
+						
+					}
+					catch(org.openqa.selenium.NoSuchElementException | IndexOutOfBoundsException e) {
+						continue;
+					}
 					WebElement artistsName = td.findElements(By.xpath("./child::*")).get(1);
 					WebElement albumTitle = td.findElements(By.xpath("./child::*")).get(2);
 
@@ -178,7 +184,7 @@ public class KexpSearch extends SpinSearch{
 				}
 		}
 		}
-		catch(org.openqa.selenium.NoSuchElementException e){
+		catch(org.openqa.selenium.NoSuchElementException | IndexOutOfBoundsException e){
 			e.printStackTrace();
 		}
 		finally {

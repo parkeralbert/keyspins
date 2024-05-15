@@ -568,3 +568,34 @@ Key|Julie Doiron|How Can We|KEXP|Seattle|CHERYL WATERS|2022-01-19
 Key|Cat Power|Pa Pa Power|KEXP|Seattle|LARRY ROSE|2022-01-19
 Key|Cat Power|Bad Religion|KEXP|Seattle|GABRIEL TEODROS|2022-01-19
 Key|Cat Power|Here Comes a Regular|KEXP|Seattle|JOHN RICHARDS|2022-01-19
+Key|Widowspeak|Everything Is Simple|KEXP|Seattle|JOHN RICHARDS|2022-01-20
+Key|Riki|Marigold|KEXP|Seattle|KENNADY QUILLE|2022-01-25
+Key|Julie Doiron|Thought of You|KEXP|Seattle|KENNADY QUILLE|2022-01-19
+Key|Julie Doiron|How Can We|KEXP|Seattle|CHERYL WATERS|2022-01-19
+Key|Boris|Icelina|KEXP|Seattle|SEAN|2022-01-25
+Key|David Bowie|She Shook Me Cold|KEXP|Seattle|DR. WEST|2022-01-23
+Key|David Bowie|Golden Years|KEXP|Seattle|REEVES|2022-01-23
+Key|David Bowie|Diamond Dogs|KEXP|Seattle|CHERYL WATERS|2022-01-24
+Key|Camp Cope|Running with the Hurricane|KEXP|Seattle|CHERYL WATERS|2022-01-20
+Key|Camp Cope|Running with the Hurricane|KEXP|Seattle|KENNADY QUILLE|2022-01-21
+Key|Camp Cope|Running with the Hurricane|KEXP|Seattle|REEVES|2022-01-23
+Key|Camp Cope|Running with the Hurricane|KEXP|Seattle|CHERYL WATERS|2022-01-24
+Key|Camp Cope|Running with the Hurricane|KEXP|Seattle|KEVIN COLE|2022-01-24
+Key|Camp Cope|Running with the Hurricane|KEXP|Seattle|KEVIN COLE|2022-01-25
+Key|Reptaliens|Like A Dog|KEXP|Seattle|KENNADY QUILLE|2022-01-25
+Key|Mr Twin Sister|Youth Obsessed|KEXP|Seattle|TROY NELSON|2022-01-22
+Key|Mr Twin Sister|Fantasy|KEXP|Seattle|DJ MISS ASHLEY|2022-01-23
+Key|Mr Twin Sister|Youth Obsessed|KEXP|Seattle|LARRY MIZELL, JR.|2022-01-24
+Key|Mr Twin Sister|Polvo|KEXP|Seattle|KEVIN COLE|2022-01-25
+Key|Anxious|More Than A Letter|KEXP|Seattle|KEVIN COLE|2022-01-21
+Key|Anxious|In April|KEXP|Seattle|REEVES|2022-01-23
+Key|A Place to Bury Strangers|Let's See Each Other|KEXP|Seattle|KENNADY QUILLE|2022-01-21
+Key|Arlo Parks|Hope|KEXP|Seattle|KEVIN COLE|2022-01-25
+Key|Cat Power|Pa Pa Power|KEXP|Seattle|LARRY ROSE|2022-01-19
+Key|Cat Power|Bad Religion|KEXP|Seattle|GABRIEL TEODROS|2022-01-19
+Key|Cat Power|Here Comes a Regular|KEXP|Seattle|JOHN RICHARDS|2022-01-19
+Key|Cat Power|Here Comes a Regular|KEXP|Seattle|HANS|2022-01-20
+Key|Cat Power|Endless Sea|KEXP|Seattle|GRETA ROSE|2022-01-22
+Key|Cat Power|Cat Power|KEXP|Seattle|KID HOPS|2022-01-22
+Key|Cat Power|Pa Pa Power|KEXP|Seattle|REEVES|2022-01-23
+Key|Cat Power|Bad Religion|KEXP|Seattle|EVIE STOKES|2022-01-23
